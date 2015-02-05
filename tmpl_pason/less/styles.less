@@ -1,0 +1,40 @@
+#slider-carousel-row {
+  .ruler-bg-top();
+  .ruler-bg-bottom();
+}
+
+.ruler-bg-top {
+  &:before {
+    background: url('../images/ruler-bg-up-light.png') repeat-x;
+    padding-top: 30px;
+    width: 100%;
+    height: 10px;
+    margin-top: 50px;
+    position: relative;
+    content: " ";
+    display: table;
+  }
+  &.dark {
+    &:after {
+      background: url('../images/ruler-bg-up.png') repeat-x;
+    }
+  }
+}
+
+.ruler-bg-bottom {
+  &:after {
+    background: url('../images/ruler-bg-down-light.png') repeat-x;
+    padding-top: 30px;
+    width: 100%;
+    height: 10px;
+    margin-top: 50px;
+    position: relative;
+    content: " ";
+    display: table;
+  }
+  &.dark {
+    &:after {
+      background: url('../images/ruler-bg-down.png') repeat-x;
+    }
+  }
+}
