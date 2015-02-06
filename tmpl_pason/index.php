@@ -73,7 +73,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <?php if($this->countModules('home-slides')): ?>
             <section class="img-holder"
                      data-image="/templates/<?php echo $this->template; ?>/images/home-banner-bg.jpg"
-                     data-width="1500" data-height="900" data-extra-height="100">
+                     data-width="1500" data-height="750" data-extra-height="0">
                 <section id="slider-carousel-row">
                     <div  class="container">
                         <div id="home-slides" class="carousel slide">
@@ -92,6 +92,15 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                         </div>
                     </div>
                 </section>
+            </section>
+        <?php endif; ?>
+        <?php if ($this->countModules('featured-solution')): ?>
+            <section id="featured-solutions">
+                <div class="container">
+                    <div class="row">
+                        <jdoc:include type="modules" name="featured-solution" style="featured" />
+                    </div>
+                </div>
             </section>
         <?php endif; ?>
         <main>
