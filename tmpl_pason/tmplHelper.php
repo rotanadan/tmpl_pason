@@ -7,6 +7,15 @@
 
 class tmplHelper
 {
+    protected $menu;
+
+    protected $template;
+
+    public function __construct()
+    {
+        $this->menu = JFactory::getApplication()->getMenu();
+    }
+
     /*
      * An array of the JS files to load
      */
@@ -50,5 +59,21 @@ class tmplHelper
         }
 
         return $delayedHtml;
+    }
+
+    /*
+     * Compares the default and active menu items and determines if we are on the homepage
+     */
+    public function isHomePage()
+    {
+        // get default menu
+        $default = $this->menu->getDefault();
+        // get active menu
+        $active = $this->menu->getActive();
+        if ((is_object($default) && is_object($active)) && $default == $active)
+        {
+            return true;
+        }
+        return false;
     }
 }

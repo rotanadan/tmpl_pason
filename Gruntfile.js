@@ -16,12 +16,12 @@ module.exports = function(grunt) {
             js_frontend: {
                 files: [
                     'media/jui/js/jquery.js',
-                    'media/jui/js/html5.js'
+                    'media/jui/js/html5.js',
                 ],
                 tasks: ['concat']
             },
             less: {
-                files: ['templates/tmpl_restonic/less/*.less'],  //watched files
+                files: ['templates/tmpl_pason/less/*.less'],  //watched files
                 tasks: ['less'],                          //tasks to run
                 options: {
                     // livereload: true                        //reloads the browser

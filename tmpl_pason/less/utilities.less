@@ -4,3 +4,11 @@
   -webkit-box-sizing: border-box;
   border: @size solid @color;
 }
+
+// fade transition
+.fade-transition(@duration) {
+  -webkit-transition: @duration ease-out;
+  -moz-transition:    @duration ease-out;
+  -o-transition:      @duration ease-out;
+  transition:         @duration ease-out;
+}

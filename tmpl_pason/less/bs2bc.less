@@ -1,0 +1,73 @@
+// Bootstrap 2 backwards compatibility
+.span1 {
+  .column-builder(1);
+}
+
+.span2 {
+  .column-builder(2);
+}
+
+.span3 {
+  .column-builder(3);
+}
+
+.span4 {
+  .column-builder(4);
+}
+
+.span5 {
+  .column-builder(5);
+}
+
+.span6 {
+  .column-builder(6);
+}
+
+.span7 {
+  .column-builder(7);
+}
+
+.span8 {
+  .column-builder(8);
+}
+
+.span9 {
+  .column-builder(9);
+}
+
+.span10 {
+  .column-builder(10);
+}
+
+.span11 {
+  .column-builder(11);
+}
+
+.span12 {
+  .column-builder(12);
+}
+
+.column-builder(@cols)
+{
+  .make-lg-column(@cols);
+  .make-md-column(@cols);
+  .make-sm-column(@cols);
+  .make-xs-column(12); // default to full width at small
+}
+
+// make items into rows
+.items-row {
+  .make-row();
+}
+
+// pagination
+.pagination > ul {
+  .pagination();
+  > li > span {
+    color: @pagination-disabled-color;
+    background-color: @pagination-disabled-bg;
+    border-color: @pagination-disabled-border;
+    cursor: @cursor-disabled;
+  }
+}
+

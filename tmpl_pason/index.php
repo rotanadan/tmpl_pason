@@ -33,7 +33,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <jdoc:include type="head" />
     </head>
 
-    <body>
+    <body class="<?php if ($templateHelper->isHomePage()): echo '   home'; endif; ?>">
         <header>
             <section id="mini-nav-section" class="navbar navbar-inverse">
                 <div class="container">
@@ -73,7 +73,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <?php if($this->countModules('home-slides')): ?>
             <section class="img-holder"
                      data-image="/templates/<?php echo $this->template; ?>/images/home-banner-bg.jpg"
-                     data-width="1500" data-height="750" data-extra-height="0">
+                     data-width="1500" data-height="750" data-extra-height="0" data-max-height="550" >
                 <section id="slider-carousel-row">
                     <div  class="container">
                         <div id="home-slides" class="carousel slide">
@@ -103,6 +103,10 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </div>
             </section>
         <?php endif; ?>
+        <?php if ($this->countModules('background-hero')): ?>
+            <jdoc:include type="modules" name="background-hero" style="" />
+        <?php endif; ?>
+
         <main>
             <div class="container">
                 <div class="main-row">
@@ -111,15 +115,33 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </div>
             </div>
         </main>
-        <footer>
 
-        </footer>
+        <?php if ($this->countModules('footer')): ?>
+            <footer>
+                <div class="container">
+                    <div class="footer-row">
+                        <jdoc:include type="modules" name="footer" style="" />
+                    </div>
+                </div>
+            </footer>
+        <?php endif; ?>
 
         <script src="<?php echo '/templates/' . $this->template . '/js/jquery.imageScroll.js'; ?>"></script>
         <script>
-            jQuery('.img-holder').imageScroll({
-                holderMaxHeight: 550
+            jQuery(document).ready(function($){
+
+                $('.img-holder').each(function() {
+                    var maxheight = $(this).attr('data-max-height');
+                    var className = $(this).attr('id');
+
+                    $(this).imageScroll({
+                        holderMaxHeight: maxheight,
+                        holderClass: className
+                    });
+                });
+
             });
+
         </script>
     </body>
 </html>
