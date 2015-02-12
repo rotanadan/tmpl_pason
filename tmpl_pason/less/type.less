@@ -301,6 +301,37 @@ address {
   line-height: @line-height-base;
 }
 
+header {
+  #mini-nav-section {
+    height: 30px;
+    nav {
+      li {
+        border-right: 1px solid @pason-cyan;
+        a {
+          //.make-link(@pason-cyan, #fff, @pason-cyan);
+          color: @pason-cyan;
+          padding: 5px 15px;
+
+          &:hover {
+            color: #fff;
+            background-color: @pason-cyan;
+          }
+        }
+        &:last-child {
+          border-right: 0 none;
+        }
+      }
+    }
+  }
+
+  #main-nav-section {
+    .navbar {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}
+
 // Homepage Styles
 .home {
   .page-header {

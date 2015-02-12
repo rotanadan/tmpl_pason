@@ -21,6 +21,7 @@ JLoader::register('tmplHelper', __DIR__ . '/tmplHelper.php');
 $templateHelper = new tmplHelper();
 
 // regiser the home.js file
+$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 
 
@@ -35,7 +36,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
 
     <body class="<?php if ($templateHelper->isHomePage()): echo '   home'; endif; ?>">
         <header>
-            <section id="mini-nav-section" class="navbar navbar-inverse">
+            <section id="mini-nav-section">
                 <div class="container">
                     <div class="mini-nav-row">
                         <nav id="mini-nav" class="pull-right">
@@ -126,22 +127,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             </footer>
         <?php endif; ?>
 
-        <script src="<?php echo '/templates/' . $this->template . '/js/jquery.imageScroll.js'; ?>"></script>
-        <script>
-            jQuery(document).ready(function($){
-
-                $('.img-holder').each(function() {
-                    var maxheight = $(this).attr('data-max-height');
-                    var className = $(this).attr('id');
-
-                    $(this).imageScroll({
-                        holderMaxHeight: maxheight,
-                        holderClass: className
-                    });
-                });
-
-            });
-
-        </script>
+        <?php // defer loaded JS ?>
+        <?php echo $templateHelper->getDelayedScriptsMarkup(); ?>
     </body>
 </html>

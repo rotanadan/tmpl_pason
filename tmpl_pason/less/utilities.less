@@ -12,3 +12,12 @@
   -o-transition:      @duration ease-out;
   transition:         @duration ease-out;
 }
+
+
+.make-link(@color, @hover-color, @bg-hover-color) {
+  color: @color;
+  &:hover {
+    color: @hover-color;
+    background-color: @bg-hover-color;
+  }
+}

@@ -1493,6 +1493,27 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
+header #mini-nav-section {
+  height: 30px;
+}
+header #mini-nav-section nav li {
+  border-right: 1px solid #05dcf6;
+}
+header #mini-nav-section nav li a {
+  color: #05dcf6;
+  padding: 5px 15px;
+}
+header #mini-nav-section nav li a:hover {
+  color: #fff;
+  background-color: #05dcf6;
+}
+header #mini-nav-section nav li:last-child {
+  border-right: 0 none;
+}
+header #main-nav-section .navbar {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .home .page-header {
   margin: 0px;
   padding: 0px;
@@ -6649,6 +6670,16 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+header #mini-nav-section {
+  background: url('../images/top-menu-bg.png');
+  border-radius: 0px;
+}
+header #mini-nav-section nav li {
+  float: left;
+}
+header .navbar-brand {
+  padding: 0px;
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
