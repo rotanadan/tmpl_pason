@@ -1546,6 +1546,19 @@ header #main-nav-section #main-nav li > a:after {
   padding-left: 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+.main-banner-slides {
+  color: #fff;
+}
+.main-banner-slides h1 {
+  font-weight: 100;
+  font-size: 70px;
+}
+.main-banner-slides .carousel-control {
+  font-size: 80px;
+}
+.main-banner-slides .carousel-control:hover {
+  color: #05dcf6;
+}
 .home .page-header {
   margin: 0px;
   padding: 0px;
@@ -6765,6 +6778,17 @@ header #main-nav-section .navbar {
 }
 header #main-nav-section .navbar-brand {
   padding: 0px;
+}
+.main-banner-slides .next,
+.main-banner-slides .previous {
+  top: 30%;
+}
+.main-banner-slides .next {
+  left: auto;
+  right: -20%;
+}
+.main-banner-slides .previous {
+  left: -20%;
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;

@@ -74,7 +74,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <?php if($this->countModules('home-slides')): ?>
             <section class="img-holder"
                      data-image="/templates/<?php echo $this->template; ?>/images/home-banner-bg.jpg"
-                     data-width="1500" data-height="750" data-extra-height="0" data-max-height="550" >
+                     data-width="1500" data-height="750" data-extra-height="0" data-max-height="550" id="main-banner-slides">
                 <section id="slider-carousel-row">
                     <div  class="container">
                         <div id="home-slides" class="carousel slide">
@@ -82,12 +82,12 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                 <jdoc:include type="modules" name="home-slides" style="slide" data-target="home-slide" />
                             </div>
                             <!-- Controls -->
-                            <a class="left carousel-control" href="#home-slides" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <a class="previous carousel-control" href="#home-slides" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="right carousel-control" href="#home-slides" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <a class="next carousel-control" href="#home-slides" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
