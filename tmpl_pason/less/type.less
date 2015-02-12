@@ -302,17 +302,17 @@ address {
 }
 
 header {
+  // style the mini nav
   #mini-nav-section {
-    height: 30px;
     nav {
       li {
         border-right: 1px solid @pason-cyan;
         a {
           //.make-link(@pason-cyan, #fff, @pason-cyan);
           color: @pason-cyan;
-          padding: 5px 15px;
+          padding: 8px 15px 7px 15px;
 
-          &:hover {
+          &:hover, &:focus {
             color: #fff;
             background-color: @pason-cyan;
           }
@@ -324,10 +324,43 @@ header {
     }
   }
 
+  // style the main nav
   #main-nav-section {
-    .navbar {
-      margin-bottom: 10px;
-      margin-top: 10px;
+    #main-nav  li  > a {
+      color: #000;
+      padding: 8px 8px;
+      text-transform: uppercase;
+      &:hover, &:focus {
+        color: #000;
+        background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat 50% bottom transparent;
+
+        &:before {
+          content: "[";
+          font-size: 18px;
+          padding-right: 2px;
+          font-family: @font-family-monospace;
+          color: @pason-orange;
+        }
+        &:after {
+          content: "]";
+          font-size: 18px;
+          padding-left: 2px;
+          font-family: @font-family-monospace;
+          color: @pason-orange;
+        }
+      }
+      &:before, {
+        content: "\00a0";
+        font-size: 18px;
+        padding-right: 2px;
+        font-family: @font-family-monospace;
+      }
+      &:after {
+        content: "\00a0";
+        font-size: 18px;
+        padding-left: 2px;
+        font-family: @font-family-monospace;
+      }
     }
   }
 }
