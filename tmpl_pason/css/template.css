@@ -1549,6 +1549,9 @@ header #main-nav-section #main-nav li > a:after {
 .main-banner-slides {
   color: #fff;
 }
+.main-banner-slides .small {
+  color: #fff;
+}
 .main-banner-slides h1 {
   font-weight: 100;
   font-size: 70px;
@@ -6779,16 +6782,19 @@ header #main-nav-section .navbar {
 header #main-nav-section .navbar-brand {
   padding: 0px;
 }
-.main-banner-slides .next,
-.main-banner-slides .previous {
+.main-banner-slides .next-toggle,
+.main-banner-slides .previous-toggle {
   top: 30%;
 }
-.main-banner-slides .next {
+.main-banner-slides .next-toggle {
   left: auto;
   right: -20%;
 }
-.main-banner-slides .previous {
+.main-banner-slides .previous-toggle {
   left: -20%;
+}
+#slider-carousel-row {
+  min-height: 280px;
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;

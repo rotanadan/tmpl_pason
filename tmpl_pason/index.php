@@ -11,9 +11,6 @@ $params = $this->params;
 // Add Stylesheets
 $this->addStyleSheet(JUri::root() . '/templates/' . $this->template . '/css/template.css');
 
-// add in parallax
-//JHtml::script(JUri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js', true);
-
 // load the template helper
 JLoader::register('tmplHelper', __DIR__ . '/tmplHelper.php');
 
@@ -21,6 +18,7 @@ JLoader::register('tmplHelper', __DIR__ . '/tmplHelper.php');
 $templateHelper = new tmplHelper();
 
 // regiser the home.js file
+$templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->template . '/js/bootstrap.min.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 
@@ -77,16 +75,18 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                      data-width="1500" data-height="750" data-extra-height="0" data-max-height="550" id="main-banner-slides">
                 <section id="slider-carousel-row">
                     <div  class="container">
-                        <div id="home-slides" class="carousel slide">
-                            <div class="carousel-inner" role="list-box">
-                                <jdoc:include type="modules" name="home-slides" style="slide" data-target="home-slide" />
+                        <div id="home-slides" class="carousel slide" data-ride="carousel" data-interval="8000">
+                            <div class="carousel-inner" role="listbox">
+                                <jdoc:include type="modules" name="home-slides" style="slide" />
+                                <ol class="carousel-indicators"></ol>
                             </div>
+
                             <!-- Controls -->
-                            <a class="previous carousel-control" href="#home-slides" role="button" data-slide="prev">
+                            <a class="previous-toggle carousel-control" href="#home-slides" role="button" data-slide="prev">
                                 <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="next carousel-control" href="#home-slides" role="button" data-slide="next">
+                            <a class="next-toggle carousel-control" href="#home-slides" role="button" data-slide="next">
                                 <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
