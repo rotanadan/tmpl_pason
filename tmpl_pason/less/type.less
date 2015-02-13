@@ -468,3 +468,31 @@ header {
     }
   }
 }
+
+// footer menu
+footer {
+  .navbar-nav {
+    padding-top: 15px;
+    > li {
+      > a {
+        color: #000;
+        border-right: 1px solid #000;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 15px;
+
+        &:hover, &:focus {
+          background: transparent;
+          text-decoration: underline;
+          color: #000;
+        }
+
+      }
+      &:last-child {
+        > a {
+          border-right: 0px none;
+        }
+      }
+    }
+  }
+}

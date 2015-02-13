@@ -1596,19 +1596,19 @@ header #main-nav-section #main-nav li > a:after {
   position: absolute;
   top: 43%;
 }
-.home main {
+.home main .item-intro-inner {
   color: #fff;
 }
-.home main h1,
-.home main h2,
-.home main h3,
-.home main h4 {
+.home main .item-intro-inner h1,
+.home main .item-intro-inner h2,
+.home main .item-intro-inner h3,
+.home main .item-intro-inner h4 {
   margin-top: 0px;
 }
-.home .readmore {
+.home main .item-intro-inner .readmore {
   text-transform: uppercase;
 }
-.home .readmore > a {
+.home main .item-intro-inner .readmore > a {
   color: #fff;
 }
 .learn-more {
@@ -1688,6 +1688,25 @@ fieldset[disabled] .learn-more {
   width: 100%;
   height: 5px;
   margin-top: 5px;
+}
+footer .navbar-nav {
+  padding-top: 15px;
+}
+footer .navbar-nav > li > a {
+  color: #000;
+  border-right: 1px solid #000;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 15px;
+}
+footer .navbar-nav > li > a:hover,
+footer .navbar-nav > li > a:focus {
+  background: transparent;
+  text-decoration: underline;
+  color: #000;
+}
+footer .navbar-nav > li:last-child > a {
+  border-right: 0px none;
 }
 code,
 kbd,
