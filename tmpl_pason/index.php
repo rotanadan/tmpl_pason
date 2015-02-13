@@ -78,8 +78,8 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                         <div id="home-slides" class="carousel slide" data-ride="carousel" data-interval="8000">
                             <div class="carousel-inner" role="listbox">
                                 <jdoc:include type="modules" name="home-slides" style="slide" />
-                                <ol class="carousel-indicators"></ol>
                             </div>
+                            <ol class="carousel-indicators"></ol>
 
                             <!-- Controls -->
                             <a class="previous-toggle carousel-control" href="#home-slides" role="button" data-slide="prev">
