@@ -371,6 +371,16 @@ header {
   .small {
     color: #fff;
   }
+
+  // links
+  a, .btn-link {
+    color: #fff;
+    text-decoration: underline;
+    &:hover {
+      color: @pason-cyan;
+    }
+  }
+
   h1 {
     font-weight: 100;
     font-size: 70px;
@@ -413,16 +423,18 @@ header {
     }
   }
   main {
-    color: #fff;
-    // set the headings back to black
-    h1, h2, h3, h4 {
-      margin-top: 0px;
-    }
-  }
-  .readmore {
-    text-transform: uppercase;
-    > a {
+    .item-intro-inner {
       color: #fff;
+      // set the headings back to black
+      h1, h2, h3, h4 {
+        margin-top: 0px;
+      }
+      .readmore {
+        text-transform: uppercase;
+        > a {
+          color: #fff;
+        }
+      }
     }
   }
 }

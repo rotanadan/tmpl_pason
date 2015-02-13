@@ -1552,6 +1552,15 @@ header #main-nav-section #main-nav li > a:after {
 .main-banner-slides .small {
   color: #fff;
 }
+.main-banner-slides a,
+.main-banner-slides .btn-link {
+  color: #fff;
+  text-decoration: underline;
+}
+.main-banner-slides a:hover,
+.main-banner-slides .btn-link:hover {
+  color: #05dcf6;
+}
 .main-banner-slides h1 {
   font-weight: 100;
   font-size: 70px;
@@ -6793,8 +6802,17 @@ header #main-nav-section .navbar-brand {
 .main-banner-slides .previous-toggle {
   left: -20%;
 }
-#slider-carousel-row {
-  min-height: 280px;
+.main-banner-slides .carousel-indicators {
+  left: 0px;
+  bottom: 0px;
+  margin-left: 0px;
+  text-align: left;
+}
+.main-banner-slides .carousel-indicators li {
+  margin-right: 15px;
+}
+.main-banner-slides #home-slides {
+  padding-bottom: 20px;
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
@@ -6914,21 +6932,6 @@ footer p {
   content: " ";
   display: table;
 }
-/*
-.ruler-bg-top-dark {
-  .ruler-bg-top();
-  &:before {
-    background: url('../images/ruler-bg-up.png') repeat-x !important;
-  }
-}
-
-.ruler-bg-bottom-dark {
-  .ruler-bg-bottom();
-  &:after {
-    background: url('../images/ruler-bg-down.png') repeat-x !important;
-  }
-}
-*/
 #featured-solutions {
   margin-top: -90px;
   min-height: 240px;
