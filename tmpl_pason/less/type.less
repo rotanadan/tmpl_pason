@@ -326,6 +326,9 @@ header {
 
   // style the main nav
   #main-nav-section {
+
+    font-weight: 400;
+
     #main-nav  li  > a {
       color: #000;
       padding: 8px 8px;
@@ -393,6 +396,34 @@ header {
   }
 }
 
+#home-slides {
+  .indicator-titles {
+    li {
+      font-weight: 100;
+      font-size: 25px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: inline;
+      position: relative;
+      padding: 0 20px;
+      &:before {
+        content: '[';
+        font-size: 30px;
+        position: absolute;
+        top: -2px;
+        left: 0px;
+      }
+      &:after {
+        content: ']';
+        font-size: 30px;
+        position: absolute;
+        top: -2px;
+        right: 0px;
+      }
+    }
+  }
+}
+
 // Homepage Styles
 .home {
   .page-header {
@@ -451,6 +482,13 @@ header {
   padding: 10px 0px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+}
+
+.page-headline {
+  color: #fff;
+  .page-headline-inner-row {
+
+  }
 }
 
 .about-pason,

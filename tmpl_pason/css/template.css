@@ -1060,7 +1060,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: klavika, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1508,6 +1508,9 @@ header #mini-nav-section nav li a:focus {
 header #mini-nav-section nav li:last-child {
   border-right: 0 none;
 }
+header #main-nav-section {
+  font-weight: 400;
+}
 header #main-nav-section #main-nav li > a {
   color: #000;
   padding: 8px 8px;
@@ -1570,6 +1573,29 @@ header #main-nav-section #main-nav li > a:after {
 }
 .main-banner-slides .carousel-control:hover {
   color: #05dcf6;
+}
+#home-slides .indicator-titles li {
+  font-weight: 100;
+  font-size: 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  padding: 0 20px;
+}
+#home-slides .indicator-titles li:before {
+  content: '[';
+  font-size: 30px;
+  position: absolute;
+  top: -2px;
+  left: 0px;
+}
+#home-slides .indicator-titles li:after {
+  content: ']';
+  font-size: 30px;
+  position: absolute;
+  top: -2px;
+  right: 0px;
 }
 .home .page-header {
   margin: 0px;
@@ -1671,6 +1697,9 @@ fieldset[disabled] .learn-more {
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.page-headline {
+  color: #fff;
 }
 .about-pason,
 .customer-support {
@@ -6007,7 +6036,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: klavika, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -6114,7 +6143,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: klavika, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6747,50 +6776,6 @@ button.close {
     display: none !important;
   }
 }
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-Light.otf');
-  font-weight: 100;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-LightItalic.otf');
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-Regular.otf');
-  font-weight: normal;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-RegularItalic.otf');
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-Medium.otf');
-  font-weight: 200;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-MediumItalic.otf');
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-Bold.otf');
-  font-weight: 300;
-}
-@font-face {
-  font-family: klavika;
-  src: url('../fonts/klavika/KlavikaCH-BoldItalic.otf');
-  font-weight: 300;
-  font-style: italic;
-}
 header #mini-nav-section {
   background: url('../images/top-menu-bg.png');
   border-radius: 0px;
@@ -6800,15 +6785,15 @@ header #mini-nav-section {
 header #mini-nav-section nav li {
   float: left;
 }
-header #main-nav-section {
-  font-weight: bold;
-}
 header #main-nav-section .navbar {
   margin-bottom: 10px;
   margin-top: 10px;
 }
 header #main-nav-section .navbar-brand {
   padding: 0px;
+}
+header #main-nav-section #main-nav {
+  padding-top: 6px;
 }
 .main-banner-slides .next-toggle,
 .main-banner-slides .previous-toggle {
@@ -6833,6 +6818,24 @@ header #main-nav-section .navbar-brand {
 .main-banner-slides #home-slides {
   padding-bottom: 20px;
 }
+#home-slides .indicator-titles {
+  position: relative;
+  width: auto;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+#home-slides .indicator-titles li {
+  list-style: none;
+  list-style-type: none;
+  width: auto;
+  height: auto;
+  text-indent: 0px;
+  border: 0 none;
+  border-radius: 0px;
+  background-color: transparent;
+  margin: 0px;
+}
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
   padding-top: 30px;
@@ -6852,6 +6855,29 @@ header #main-nav-section .navbar-brand {
   position: relative;
   content: " ";
   display: table;
+}
+.page-headline-inner:before {
+  background: url('../images/ruler-bg-up-light.png') repeat-x;
+  padding-top: 30px;
+  width: 100%;
+  height: 10px;
+  margin-top: 50px;
+  position: relative;
+  content: " ";
+  display: table;
+}
+.page-headline-inner:after {
+  background: url('../images/ruler-bg-down-light.png') repeat-x;
+  padding-top: 30px;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  content: " ";
+  display: table;
+}
+.page-headline-inner .container {
+  padding-bottom: 20px;
 }
 #customer-support,
 #about-pason {

@@ -24,7 +24,10 @@ header {
     .navbar-brand {
       padding: 0px;
     }
-    font-weight: bold;
+
+    #main-nav {
+      padding-top: 6px;
+    }
   }
 }
 
@@ -54,10 +57,39 @@ header {
   }
 }
 
+// carousel indicators with titles
+#home-slides {
+  .indicator-titles {
+    position: relative;
+    width: auto;
+    float: left;
+    padding: 0px;
+    margin :0px;
+    li {
+      list-style: none;
+      list-style-type: none;
+      width: auto;
+      height: auto;
+      text-indent: 0px;
+      border: 0 none;
+      border-radius: 0px;
+      background-color: transparent;
+      margin: 0px;
+    }
+  }
+}
+
 #slider-carousel-row {
   .ruler-bg-top();
   .ruler-bg-bottom();
+}
 
+.page-headline-inner {
+  .ruler-bg-top();
+  .ruler-bg-bottom();
+  .container {
+    padding-bottom: 20px;
+  }
 }
 
 #customer-support,

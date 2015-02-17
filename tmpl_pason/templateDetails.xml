@@ -17,4 +17,19 @@
     <positions>
         <position>logo</position>
     </positions>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="main_bg_image"     type="media" default="" label="Background Image" description="The background image" />
+                <field name="image_width"       type="text" label="Image width" description="the width of the image" />
+                <field name="image_height"      type="text" label="Image height" description="the height of the image" />
+                <field name="image_max_height"  type="text" label="Image Max Height" description="the maximum image height" />
+                <field name="div_id"            type="text" label="Div ID" description="the html div id" />
+                <field name="showtitles" type="list" label="Show Carousel Titles">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
 </extension>

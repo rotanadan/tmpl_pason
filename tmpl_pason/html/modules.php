@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 function modChrome_slide($module, $params, $attribs)
 {
-    echo    '<div class="item ' . $params->get('moduleclass_sfx') . '">';
+    echo    '<div class="item ' . $params->get('moduleclass_sfx') . '" data-slide-title="' . $module->title .'">';
     echo        $module->content;
     echo    '</div>';
 }

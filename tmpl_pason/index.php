@@ -22,7 +22,6 @@ $templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->tem
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 
-
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +29,11 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <jdoc:include type="head" />
+        <script src="//use.typekit.net/srn3uki.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
     </head>
 
-    <body class="<?php if ($templateHelper->isHomePage()): echo '   home'; endif; ?>">
+    <body class="<?php if ($templateHelper->isHomePage()): echo ' home'; endif; ?>">
         <header>
             <section id="mini-nav-section">
                 <div class="container">
@@ -69,17 +70,28 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </div>
             </section>
         </header>
-        <?php if($this->countModules('home-slides')): ?>
+        <?php if($this->countModules('main-banner')): ?>
             <section class="img-holder"
-                     data-image="/templates/<?php echo $this->template; ?>/images/home-banner-bg.jpg"
-                     data-width="1500" data-height="750" data-extra-height="0" data-max-height="550" id="main-banner-slides">
+                     data-image="<?php echo JUri::root() . $this->params->get('main_bg_image'); ?>"
+                     data-width="<?php echo $this->params->get('image_width'); ?>"
+                     data-height="<?php echo $this->params->get('image_height'); ?>"
+                     data-max-height="<?php echo $this->params->get('image_max_height'); ?>"
+                     id="<?php echo $this->params->get('div_id'); ?>" data-extra-height="0">
                 <section id="slider-carousel-row">
                     <div  class="container">
                         <div id="home-slides" class="carousel slide" data-ride="carousel" data-interval="8000">
+                            <?php if ($this->params->get('showtitles', 0)): ?>
+                                <div class="carousel-titles">
+                                    <ol class="indicator-titles"></ol>
+                                    <ol class="carousel-indicators"></ol>
+                                </div>
+                            <?php endif; ?>
                             <div class="carousel-inner" role="listbox">
-                                <jdoc:include type="modules" name="home-slides" style="slide" />
+                                <jdoc:include type="modules" name="main-banner" style="slide" />
                             </div>
-                            <ol class="carousel-indicators"></ol>
+                            <?php if (! $this->params->get('showtitles', 0)): ?>
+                                <ol class="carousel-indicators" ></ol>
+                            <?php endif; ?>
 
                             <!-- Controls -->
                             <a class="previous-toggle carousel-control" href="#home-slides" role="button" data-slide="prev">
@@ -95,6 +107,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </section>
             </section>
         <?php endif; ?>
+
         <?php if ($this->countModules('featured-solution')): ?>
             <section id="featured-solutions">
                 <div class="container">
@@ -104,8 +117,13 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </div>
             </section>
         <?php endif; ?>
+
         <?php if ($this->countModules('background-hero')): ?>
             <jdoc:include type="modules" name="background-hero" style="" />
+        <?php endif; ?>
+
+        <?php if ($this->countModules('page-heading')): ?>
+            <jdoc:include type="modules" name="page-heading" style="" />
         <?php endif; ?>
 
         <main>
