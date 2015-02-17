@@ -30,7 +30,6 @@ jQuery(document).ready(function($){
         $(".indicator-titles li:eq(" + index + ")").addClass('active');
     });
 
-
     // add indicators to our carousel
     $("#home-slides .item").each(function(index, value) {
         var classParam = '';
@@ -53,8 +52,6 @@ jQuery(document).ready(function($){
 
         // for each slide push in a indicator button
         indicators.append('<li data-target="#home-slides" data-slide-to="' + index + '" ' + classParam + '></li>');
-
-
 
     });
 });
