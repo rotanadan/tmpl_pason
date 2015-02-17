@@ -1579,9 +1579,6 @@ header #main-nav-section #main-nav li > a:after {
   font-size: 25px;
   letter-spacing: 1px;
   cursor: pointer;
-  display: inline;
-  position: relative;
-  padding: 0 20px;
 }
 #home-slides .indicator-titles li:before {
   content: '[';
@@ -1596,6 +1593,18 @@ header #main-nav-section #main-nav li > a:after {
   position: absolute;
   top: -2px;
   right: 0px;
+}
+#home-slides .indicator-titles li.active {
+  background: url('../images/arrow-white.png') no-repeat center bottom;
+}
+#home-slides h1,
+#home-slides h2,
+#home-slides h3,
+#home-slides h4 {
+  font-weight: 100;
+}
+#home-slides .carousel-indicators {
+  text-align: right;
 }
 .home .page-header {
   margin: 0px;
@@ -6821,11 +6830,11 @@ header #main-nav-section #main-nav {
 #home-slides .indicator-titles {
   position: relative;
   width: auto;
-  float: left;
   padding: 0px;
   margin: 0px;
 }
 #home-slides .indicator-titles li {
+  position: relative;
   list-style: none;
   list-style-type: none;
   width: auto;
@@ -6834,7 +6843,27 @@ header #main-nav-section #main-nav {
   border: 0 none;
   border-radius: 0px;
   background-color: transparent;
-  margin: 0px;
+  padding: 0 20px 4px 20px;
+  margin: 0px 20px 0px 0px;
+  display: inline;
+}
+#home-slides .carousel-titles {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 4px;
+}
+#home-slides .carousel-titles:after {
+  border-bottom: 1px solid #fff;
+  content: " ";
+  padding-bottom: 0px;
+  width: 100%;
+  height: 8px;
+  display: block;
+}
+#home-slides .carousel-titles .carousel-indicators {
+  bottom: auto;
+  top: 10px;
+  right: 0px;
+  left: auto;
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;

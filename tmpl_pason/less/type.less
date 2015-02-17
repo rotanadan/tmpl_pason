@@ -403,9 +403,6 @@ header {
       font-size: 25px;
       letter-spacing: 1px;
       cursor: pointer;
-      display: inline;
-      position: relative;
-      padding: 0 20px;
       &:before {
         content: '[';
         font-size: 30px;
@@ -420,7 +417,17 @@ header {
         top: -2px;
         right: 0px;
       }
+      &.active {
+        background: url('../images/arrow-white.png') no-repeat center bottom;
+      }
     }
+  }
+  // light style
+  h1, h2, h3, h4 {
+    font-weight: 100;
+  }
+  .carousel-indicators {
+    text-align: right;
   }
 }
 
