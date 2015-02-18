@@ -76,4 +76,19 @@ class tmplHelper
         }
         return false;
     }
+
+    /*
+     * get's the page css class
+     */
+    public function getPageClass()
+    {
+        $class = '';
+
+        $active = $this->menu->getActive();
+        if (is_object($active)) {
+            $class = $active->params->get('page_class');
+        }
+
+        return $class;
+    }
 }
