@@ -33,7 +33,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <script>try{Typekit.load();}catch(e){}</script>
     </head>
 
-    <body class="<?php if ($templateHelper->isHomePage()): echo ' home'; endif; ?>">
+    <body class="<?php if ($templateHelper->isHomePage()): echo ' home'; endif; ?> <?php echo $templateHelper->getPageClass(); ?> ">
         <header>
             <section id="mini-nav-section">
                 <div class="container">
@@ -129,8 +129,19 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <main>
             <div class="container">
                 <div class="main-row">
-                    <jdoc:include type="message" />
-                    <jdoc:include type="component" />
+                    <section id="main-content">
+                        <jdoc:include type="modules" name="above-content" style="html5" />
+                        <jdoc:include type="message" />
+                        <jdoc:include type="component" />
+                        <jdoc:include type="modules" name="below-content" style="html5" />
+                    </section>
+                    <aside id="left-column">
+                        <jdoc:include type="modules" name="left" style="html5" />
+                    </aside>
+
+                    <aside id="right-column">
+                        <jdoc:include type="modules" name="right" style="html5" />
+                    </aside>
                 </div>
             </div>
         </main>
