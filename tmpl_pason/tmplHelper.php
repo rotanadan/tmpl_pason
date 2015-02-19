@@ -11,9 +11,10 @@ class tmplHelper
 
     protected $template;
 
-    public function __construct()
+    public function __construct($template)
     {
         $this->menu = JFactory::getApplication()->getMenu();
+        $this->template = $template;
     }
 
     /*
@@ -85,10 +86,50 @@ class tmplHelper
         $class = '';
 
         $active = $this->menu->getActive();
+
         if (is_object($active)) {
-            $class = $active->params->get('page_class');
+            $class = $active->params->get('pageclass_sfx');
         }
 
         return $class;
+    }
+
+    public function getSidebarClasses()
+    {
+        $left  = $this->hasLeftSidebar();
+        $right = $this->hasRightSidebar();
+        $class = '';
+
+        if ($left)
+        {
+            $class .= $left;
+        }
+
+        if ($right)
+        {
+            $class .= ' ' . $right;
+        }
+
+        return $class;
+    }
+
+    public function hasLeftSidebar()
+    {
+        if ($this->template->countModules('left') || $this->template->countModules('sidebar'))
+        {
+            return 'hasLeft';
+        }
+
+        return false;
+    }
+
+    public function hasRightSidebar()
+    {
+        if ($this->template->countModules('right'))
+        {
+            return 'hasRight';
+        }
+
+        return false;
     }
 }

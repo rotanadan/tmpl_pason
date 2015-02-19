@@ -15,7 +15,7 @@ $this->addStyleSheet(JUri::root() . '/templates/' . $this->template . '/css/temp
 JLoader::register('tmplHelper', __DIR__ . '/tmplHelper.php');
 
 // load the template helper
-$templateHelper = new tmplHelper();
+$templateHelper = new tmplHelper($this);
 
 // regiser the home.js file
 $templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->template . '/js/bootstrap.min.js');
@@ -32,8 +32,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <script src="//use.typekit.net/srn3uki.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
     </head>
-
-    <body class="<?php if ($templateHelper->isHomePage()): echo ' home'; endif; ?> <?php echo $templateHelper->getPageClass(); ?> ">
+    <body class="<?php if ($templateHelper->isHomePage()): echo ' home'; endif; ?><?php echo $templateHelper->getPageClass(); ?>">
         <header>
             <section id="mini-nav-section">
                 <div class="container">
@@ -127,7 +126,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <?php endif; ?>
 
         <main>
-            <div class="container">
+            <div class="container <?php echo $templateHelper->getSidebarClasses(); ?>">
                 <div class="main-row">
                     <section id="main-content">
                         <jdoc:include type="modules" name="above-content" style="html5" />
@@ -135,13 +134,20 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                         <jdoc:include type="component" />
                         <jdoc:include type="modules" name="below-content" style="html5" />
                     </section>
-                    <aside id="left-column">
-                        <jdoc:include type="modules" name="left" style="html5" />
-                    </aside>
 
-                    <aside id="right-column">
-                        <jdoc:include type="modules" name="right" style="html5" />
-                    </aside>
+                    <?php if($this->countModules('left') || $this->countModules('sidebar')): ?>
+                        <aside id="left-column">
+                            <jdoc:include type="modules" name="left" style="html5" />
+                            <jdoc:include type="modules" name="sidebar" style="html5" />
+                        </aside>
+                    <?php endif; ?>
+
+                    <?php if($this->countModules('right')): ?>
+                        <aside id="right-column">
+                            <jdoc:include type="modules" name="right" style="html5" />
+                        </aside>
+                    <?php endif; ?>
+
                 </div>
             </div>
         </main>
