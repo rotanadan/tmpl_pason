@@ -233,14 +233,23 @@ main {
     img {
       .img-responsive();
     }
-
+    .hover {
+      position: absolute;
+      top: 0px;
+      opacity: 0;
+    }
   }
   .product-link {
     border: 10px solid #e7e7e8;
     display: block;
+    position: relative;
     &:hover {
       .fade-transition(0.5s);
       border: 10px solid @pason-cyan;
+      img.hover {
+        opacity:1;
+        .fade-transition(0.5s);
+      }
     }
   }
 }
