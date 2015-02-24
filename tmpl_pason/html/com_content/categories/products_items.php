@@ -42,6 +42,15 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
                             <?php endif; ?>
                         </h3>
                         <img src="<?php echo $item->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt')); ?>" />
+                        <?php
+                            $image_path = $item->getParams()->get('image');
+                            $image_path = str_replace('.jpg', '-hover.jpg', $image_path);
+
+                        ?>
+
+                        <?php if (file_exists($image_path)): ?>
+                            <img src="<?php echo $image_path; ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt')); ?>" class="hover" />
+                        <?php endif; ?>
                     </a>
                 <?php endif; ?>
             </div>
