@@ -6955,6 +6955,14 @@ header #main-nav-section #main-nav {
   content: " ";
   display: table;
 }
+#product-info-links li > a {
+  background: #e7e7e8;
+  color: #282828;
+}
+#product-info-links li > a:hover {
+  background: #282828;
+  color: #fff;
+}
 main {
   margin-bottom: 30px;
 }
