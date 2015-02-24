@@ -170,12 +170,36 @@ header {
 }
 
 #product-info-links {
-  li > a {
-    background: #e7e7e8;
-    color: #282828;
-    &:hover {
-      background: #282828;
-      color: #fff;
+  li {
+    margin-bottom: 10px;
+    &:before {
+      content: "";
+      background: url('../images/product-menu-bg-left.png') no-repeat;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 4px;
+      height: 25px;
+      z-index: 999;
+    }
+    &:after {
+      content: "";
+      background: url('../images/product-menu-bg-right.png') no-repeat;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 4px;
+      height: 25px;
+      z-index: 999;
+    }
+    > a {
+      background: url('../images/product-menu-arrow.png') no-repeat  96% center #e7e7e8;
+      color: #282828;
+      padding: 0px 15px;
+      &:hover, &:focus {
+        background: url('../images/product-menu-arrow-hover.png') no-repeat  96%  center #282828;
+        color: #fff;
+      }
     }
   }
 }
