@@ -158,6 +158,12 @@ header {
 }
 
 #product-info-links {
+  .sidebar-nav();
+}
+
+.sidebar-nav {
+  .list-unstyled();
+  .nav();
   li {
     margin-bottom: 10px;
     &:before {
@@ -201,8 +207,9 @@ header {
 
 main {
   margin-bottom: 30px;
+  margin-top: 10px;
 
-  .main-row {
+  .main-row, .products-list {
     .make-row();
   }
 
