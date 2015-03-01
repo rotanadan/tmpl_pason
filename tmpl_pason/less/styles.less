@@ -360,9 +360,9 @@ main {
   padding: 10px;
     .page-header {
       position: absolute;
-      left: 30px;
+      left: 15px;
       margin: 0px;
-      top: 30px;
+      top: 15px;
       border: 0px none;
     }
     img {
@@ -378,12 +378,25 @@ main {
     border: 10px solid #e7e7e8;
     display: block;
     position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: url('../images/product-link-icon.png') no-repeat;
+      bottom: 15px;
+      left: 15px;
+    }
     &:hover {
       .fade-transition(0.5s);
       border: 10px solid @pason-cyan;
       img.hover {
         opacity:1;
         .fade-transition(0.5s);
+      }
+      &:after {
+        .fade-transition(0.5s);
+        background: transparent;
       }
     }
   }
