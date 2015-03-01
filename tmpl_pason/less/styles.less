@@ -133,7 +133,7 @@ header {
       .item-intro-inner {
         position: relative;
         padding: 15px 15px 0px 15px;
-        border: 5px solid @pason-gray;
+        border: 10px solid @pason-gray;
         background: @pason-gray;
         z-index: 1;
         .fade-transition(0.5s);
@@ -149,7 +149,7 @@ header {
 
         }
         &:hover {
-          border: 5px solid @pason-cyan;
+          border: 10px solid @pason-cyan;
           background: @pason-cyan;
         }
       }
@@ -204,6 +204,13 @@ header {
   }
 }
 
+#main-content {
+  .make-lg-column(12);
+  .make-md-column(12);
+  .make-sm-column(12);
+  .make-xs-column(12);
+}
+
 main {
   margin-bottom: 30px;
 
@@ -250,10 +257,11 @@ main {
       .make-md-column(8);
       .make-sm-column(8);
       .make-xs-column(8);
-
     }
   }
 }
+
+
 
 .products-list {
   .item {
@@ -314,9 +322,13 @@ main {
 }
 
 footer {
+  font-size: 14px;
   color: @pason-orange;
   p {
     line-height: @navbar-height;
+  }
+  a {
+    color: #565658;
   }
 }
 
@@ -348,10 +360,10 @@ footer {
 .ruler-bg-top {
   &:before {
     background: url('../images/ruler-bg-up-light.png') repeat-x;
-    padding-top: 30px;
+    padding-top: 20px;
     width: 100%;
-    height: 10px;
-    margin-top: 50px;
+    height: 13px;
+    margin-top: 45px;
     position: relative;
     content: " ";
     display: table;

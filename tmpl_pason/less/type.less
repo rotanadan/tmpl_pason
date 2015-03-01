@@ -428,9 +428,10 @@ header {
   // light style
   h1, h2, h3, h4 {
     font-weight: 100;
+    margin-top: 10px;
   }
   .carousel-indicators {
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -438,7 +439,6 @@ header {
 .home {
   .page-header {
     margin: 0px;
-    padding: 0px;
     border-bottom: 0 none;
 
     // fancy heading
@@ -446,6 +446,7 @@ header {
       text-align: center;
       position: relative;
       color: #000;
+      text-transform: uppercase;
       span {
         padding: 0 20px;
         background: #fff;
@@ -469,6 +470,7 @@ header {
       // set the headings back to black
       h1, h2, h3, h4 {
         margin-top: 0px;
+        .small();
       }
       .readmore {
         text-transform: uppercase;
@@ -477,6 +479,32 @@ header {
         }
       }
     }
+  }
+  main {
+    .item-intro-inner,  {
+      font-size: 14px;
+    }
+    .item-intro-inner {
+      h1, h2, h3, h4, .btn {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+    .btn {
+      padding: 6px 0px;
+    }
+  }
+}
+
+/* align the phone number to the top right */
+#customer-phone {
+  border-bottom: 0px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  display: block;
+  &:after {
+    border-bottom: 0px none;
   }
 }
 

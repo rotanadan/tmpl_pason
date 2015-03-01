@@ -1160,8 +1160,8 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
+  font-weight: 100;
+  line-height: 1.2;
   color: inherit;
 }
 h1 small,
@@ -1244,11 +1244,11 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 20px;
+  font-size: 25px;
 }
 h3,
 .h3 {
-  font-size: 26px;
+  font-size: 24px;
 }
 h4,
 .h4 {
@@ -1608,19 +1608,20 @@ header #main-nav-section #main-nav li > a:after {
 #home-slides h3,
 #home-slides h4 {
   font-weight: 100;
+  margin-top: 10px;
 }
 #home-slides .carousel-indicators {
-  text-align: right;
+  text-align: left;
 }
 .home .page-header {
   margin: 0px;
-  padding: 0px;
   border-bottom: 0 none;
 }
 .home .page-header h1 {
   text-align: center;
   position: relative;
   color: #000;
+  text-transform: uppercase;
 }
 .home .page-header h1 span {
   padding: 0 20px;
@@ -1645,12 +1646,38 @@ header #main-nav-section #main-nav li > a:after {
 .home main .item-intro-inner h3,
 .home main .item-intro-inner h4 {
   margin-top: 0px;
+  font-size: 88%;
 }
 .home main .item-intro-inner .readmore {
   text-transform: uppercase;
 }
 .home main .item-intro-inner .readmore > a {
   color: #fff;
+}
+.home main .item-intro-inner {
+  font-size: 14px;
+}
+.home main .item-intro-inner h1,
+.home main .item-intro-inner h2,
+.home main .item-intro-inner h3,
+.home main .item-intro-inner h4,
+.home main .item-intro-inner .btn {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.home main .btn {
+  padding: 6px 0px;
+}
+/* align the phone number to the top right */
+#customer-phone {
+  border-bottom: 0px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  display: block;
+}
+#customer-phone:after {
+  border-bottom: 0px none;
 }
 .products-list a.product-link {
   color: #000;
@@ -6564,7 +6591,11 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 main .main-row:before,
-main .main-row:after {
+main .main-row:after,
+.items-row:before,
+.items-row:after,
+.row-fluid:before,
+.row-fluid:after {
   content: " ";
   display: table;
 }
@@ -6583,7 +6614,9 @@ main .main-row:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-main .main-row:after {
+main .main-row:after,
+.items-row:after,
+.row-fluid:after {
   clear: both;
 }
 .center-block {
@@ -6912,10 +6945,10 @@ header #main-nav-section #main-nav {
 }
 #slider-carousel-row:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
-  padding-top: 30px;
+  padding-top: 20px;
   width: 100%;
-  height: 10px;
-  margin-top: 50px;
+  height: 13px;
+  margin-top: 45px;
   position: relative;
   content: " ";
   display: table;
@@ -6932,10 +6965,10 @@ header #main-nav-section #main-nav {
 }
 .page-headline-inner:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
-  padding-top: 30px;
+  padding-top: 20px;
   width: 100%;
-  height: 10px;
-  margin-top: 50px;
+  height: 13px;
+  margin-top: 45px;
   position: relative;
   content: " ";
   display: table;
@@ -6969,7 +7002,7 @@ header #main-nav-section #main-nav {
 .home main .item .item-intro-inner {
   position: relative;
   padding: 15px 15px 0px 15px;
-  border: 5px solid #c9cacc;
+  border: 10px solid #c9cacc;
   background: #c9cacc;
   z-index: 1;
   -webkit-transition: 0.5s ease-out;
@@ -6988,7 +7021,7 @@ header #main-nav-section #main-nav {
   border: 1px solid #FFFFFF;
 }
 .home main .item .item-intro-inner:hover {
-  border: 5px solid #05dcf6;
+  border: 10px solid #05dcf6;
   background: #05dcf6;
 }
 .home footer:before {
@@ -7032,6 +7065,32 @@ header #main-nav-section #main-nav {
 #product-info-links li > a:focus {
   background: url('../images/product-menu-arrow-hover.png') no-repeat 96% center #282828;
   color: #fff;
+}
+#main-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 1200px) {
+  #main-content {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #main-content {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #main-content {
+    float: left;
+    width: 100%;
+  }
 }
 main {
   margin-bottom: 30px;
@@ -7229,10 +7288,14 @@ main .hasRight #main-content {
   display: block;
 }
 footer {
+  font-size: 14px;
   color: #f47f20;
 }
 footer p {
   line-height: 50px;
+}
+footer a {
+  color: #565658;
 }
 .customer-support-row:before,
 .about-pason-row:before {
@@ -7258,10 +7321,10 @@ footer p {
 }
 .ruler-bg-top:before {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
-  padding-top: 30px;
+  padding-top: 20px;
   width: 100%;
-  height: 10px;
-  margin-top: 50px;
+  height: 13px;
+  margin-top: 45px;
   position: relative;
   content: " ";
   display: table;
@@ -7277,7 +7340,7 @@ footer p {
   display: table;
 }
 #featured-solutions {
-  margin-top: -90px;
+  margin-top: -77px;
   min-height: 240px;
 }
 #featured-solutions .featured-solution {
@@ -7307,6 +7370,11 @@ footer p {
   background: #fff;
   padding: 7px 15px;
   text-transform: uppercase;
+}
+#featured-solutions .featured-solution-title h5 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
 }
 #featured-solutions .featured-solution-content {
   margin: 0 -5px -5px -5px;
@@ -7629,6 +7697,11 @@ footer p {
     float: left;
     width: 100%;
   }
+}
+.items-row,
+.row-fluid {
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .pagination > ul {
   display: inline-block;
