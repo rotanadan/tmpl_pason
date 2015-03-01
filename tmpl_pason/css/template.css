@@ -1752,15 +1752,19 @@ fieldset[disabled] .learn-more {
   color: #fff;
 }
 .about-pason,
-.customer-support {
+.customer-support,
+.page-headline {
   color: #fff;
 }
 .about-pason h1,
-.customer-support h1 {
+.customer-support h1,
+.page-headline h1 {
   border-bottom: 1px solid #fff;
+  text-transform: uppercase;
 }
 .about-pason h1:after,
-.customer-support h1:after {
+.customer-support h1:after,
+.page-headline h1:after {
   border-top: 1px solid #fff;
   content: "";
   display: block;
@@ -1817,6 +1821,18 @@ footer .navbar-nav > li > a:focus {
 }
 footer .navbar-nav > li:last-child > a {
   border-right: 0px none;
+}
+.double-line {
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+}
+.double-line:after {
+  border-top: 1px solid #fff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  margin-top: 5px;
 }
 code,
 kbd,
@@ -7024,15 +7040,6 @@ header #main-nav-section #main-nav {
   border: 10px solid #05dcf6;
   background: #05dcf6;
 }
-.home footer:before {
-  background: url('../images/ruler-bg-up-gray.png') repeat-x !important;
-  padding-top: 10px;
-  width: 100%;
-  height: 10px;
-  position: relative;
-  content: " ";
-  display: table;
-}
 #product-info-links li {
   margin-bottom: 10px;
 }
@@ -7296,6 +7303,15 @@ footer p {
 }
 footer a {
   color: #565658;
+}
+footer:before {
+  background: url('../images/ruler-bg-up-gray.png') repeat-x !important;
+  padding-top: 10px;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  content: " ";
+  display: table;
 }
 .customer-support-row:before,
 .about-pason-row:before {
