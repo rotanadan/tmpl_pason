@@ -164,7 +164,7 @@ header {
 .sidebar-nav {
   .list-unstyled();
   .nav();
-  li {
+  > li {
     margin-bottom: 10px;
     &:before {
       content: "";
@@ -190,11 +190,17 @@ header {
       background: url('../images/product-menu-arrow.png') no-repeat  96% center #e7e7e8;
       color: #282828;
       padding: 0px 15px;
-      &:hover, &:focus {
+      &:hover, &:focus, &.active {
         background: url('../images/product-menu-arrow-hover.png') no-repeat  96%  center #282828;
         color: #fff;
       }
     }
+  }
+  > li.active > a,
+  > li.active > a:hover,
+  > li.active > a:focus {
+    background: url('../images/product-menu-arrow-hover.png') no-repeat  96%  center #282828;
+    color: #fff;
   }
 }
 
@@ -256,7 +262,98 @@ main {
   }
 }
 
+.product-categoires-inline {
+  .nav();
+  .nav-pills();
+  .nav-justified();
+  .sidebar-nav();
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-transform: uppercase;
+  > li {
+    display: table-cell;
+    padding: 0 10px;
+    // we don't need spacing on first & last items
+    &:first-child {
+      padding-left: 0px;
+    }
+    &:last-child {
+      padding-right: 0px;
+    }
+    // move the right and left background images in 10px because of padding
+    &:before {
+      left: 10px;
+    }
+    &:after {
+      right: 10px;
+    }
+    // we don't need the extra padding on first & last
+    &:first-child:before {
+      left: 0px;
+    }
+    &:last-child:after {
+      right: 0px;
+    }
+  }
+  > li > a {
+    .border-left-radius(0);
+    .border-right-radius(0);
+    .border-top-radius(0);
+    .border-bottom-radius(0);
+    background: #282828;
+    color: #fff;
+  }
+  > li {
+    &:before {
+      background: url('../images/product-menu-bg-left.png') no-repeat;
+    }
+    &:after {
+      background: url('../images/product-menu-bg-right.png') no-repeat;
+    }
+  }
+  > li.active {
+    &:before {
+      background: url('../images/product-categories-nav-left.png') no-repeat;
+    }
+    &:after {
+      background: url('../images/product-categories-nav-right.png') no-repeat;
+    }
+    a {
+      background:  @pason-orange;
+      &:after {
+        content: " ";
+        background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat;
+        position: absolute;
+        bottom: -6px;
+        display: block;
+        width: 11px;
+        height: 6px;
+        left: 50%;
+      }
+    }
+  }
+  // hover & focus
 
+  > li.active:hover,
+  > li.active:focus,
+  > li:hover,
+  > li:focus {
+    &:before {
+      background: url('../images/product-categories-nav-left.png') no-repeat;
+    }
+    &:after {
+      background: url('../images/product-categories-nav-right.png') no-repeat;
+    }
+    > a {
+      background: @pason-cyan;
+      &:after {
+        content: " ";
+        background: transparent;
+      }
+    }
+  }
+
+}
 
 .products-list {
   .item {
