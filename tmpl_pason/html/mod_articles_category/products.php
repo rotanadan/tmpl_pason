@@ -9,6 +9,18 @@
 
 defined('_JEXEC') or die;
 
+$input = JFactory::getApplication()->input;
+
+$view = $input->get('view');
+
+$isCategoryView = false;
+
+if ($view == 'category')
+{
+    $isCategoryView = true;
+}
+
+
 ?>
 <ul id="product-info-links" class="category-module<?php echo $moduleclass_sfx; ?> nav nav-list">
 	<?php if ($grouped) : ?>
@@ -79,7 +91,10 @@ defined('_JEXEC') or die;
 		</li>
 		<?php endforeach; ?>
 	<?php else : ?>
-        <li><a href="<?php echo $list[0]->displayCategoryLink; ?>">About</a></li>
+        <li><a href="<?php echo $list[0]->displayCategoryLink; ?>" <?php if ($isCategoryView): ?> class="active" <?php endif; ?>>
+                About
+            </a>
+        </li>
 		<?php foreach ($list as $item) : ?>
 			<li>
 				<?php if ($params->get('link_titles') == 1) : ?>

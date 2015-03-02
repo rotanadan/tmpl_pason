@@ -1682,7 +1682,7 @@ header #main-nav-section #main-nav li > a:after {
 .products-list a.product-link {
   color: #000;
 }
-.product-detail .page-header h1 {
+.product-title-row h1 {
   font-weight: 600;
   font-size: 90px;
   color: #f47f20;
@@ -6618,6 +6618,8 @@ main .products-list:after,
 .product-categoires-inline:after,
 .product-categoires-inline:before,
 .product-categoires-inline:after,
+.product-title-row:before,
+.product-title-row:after,
 .items-row:before,
 .items-row:after,
 .row-fluid:before,
@@ -6646,6 +6648,7 @@ main .main-row:after,
 main .products-list:after,
 .product-categoires-inline:after,
 .product-categoires-inline:after,
+.product-title-row:after,
 .items-row:after,
 .row-fluid:after {
   clear: both;
@@ -7691,9 +7694,18 @@ main .hasRight #main-content {
   transition: 0.5s ease-out;
   background: transparent;
 }
-.product-detail .page-header {
-  margin-top: -120px;
+.product-title-row {
+  margin-left: -10px;
+  margin-right: -10px;
   position: relative;
+}
+.product-title-row.single {
+  margin-top: -144px;
+}
+.product-title-row.double {
+  margin-top: -144px;
+}
+.product-detail .page-header {
   border-bottom: 0px none;
 }
 .product-detail .product-header-row:after {

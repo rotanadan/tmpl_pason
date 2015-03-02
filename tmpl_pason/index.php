@@ -125,6 +125,12 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             <jdoc:include type="modules" name="page-heading" style="" />
         <?php endif; ?>
 
+        <?php if($this->countMOdules('product-title')): ?>
+            <section class="product-title">
+                <jdoc:include type="modules" name="product-title" style="html5" />
+            </section>
+        <?php endif; ?>
+
         <main>
             <div class="container <?php echo $templateHelper->getSidebarClasses(); ?>">
                 <div class="main-row">
