@@ -1496,6 +1496,9 @@ address {
 body {
   font-weight: 100;
 }
+.clear-margin {
+  margin: 0px;
+}
 header {
   font-size: 14px;
 }
@@ -6999,7 +7002,7 @@ header #main-nav-section #main-nav {
   right: 0px;
   left: auto;
 }
-#slider-carousel-row:before {
+.light-ruler-top {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
   padding-top: 20px;
   width: 100%;
@@ -7009,7 +7012,7 @@ header #main-nav-section #main-nav {
   content: " ";
   display: table;
 }
-#slider-carousel-row:after {
+.light-ruler-bottom {
   background: url('../images/ruler-bg-down-light.png') repeat-x;
   padding-top: 30px;
   width: 100%;
@@ -7019,17 +7022,11 @@ header #main-nav-section #main-nav {
   content: " ";
   display: table;
 }
-.page-headline-inner:before {
+.page-headline-inner {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
   padding-top: 20px;
-  width: 100%;
   height: 13px;
   margin-top: 45px;
-  position: relative;
-  content: " ";
-  display: table;
-}
-.page-headline-inner:after {
   background: url('../images/ruler-bg-down-light.png') repeat-x;
   padding-top: 30px;
   width: 100%;
@@ -7782,7 +7779,7 @@ footer:before {
   content: " ";
   display: table;
 }
-.ruler-bg-top:before {
+.ruler-bg-top {
   background: url('../images/ruler-bg-up-light.png') repeat-x;
   padding-top: 20px;
   width: 100%;
@@ -7792,7 +7789,7 @@ footer:before {
   content: " ";
   display: table;
 }
-.ruler-bg-bottom:after {
+.ruler-bg-bottom {
   background: url('../images/ruler-bg-down-light.png') repeat-x;
   padding-top: 30px;
   width: 100%;
@@ -8234,4 +8231,10 @@ footer:before {
   background-color: #ffffff;
   border-color: #dddddd;
   cursor: not-allowed;
+}
+.icon-search {
+  font-family: 'Glyphicons Halflings';
+}
+.icon-search:before {
+  content: "\e003";
 }

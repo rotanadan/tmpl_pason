@@ -21,7 +21,7 @@ $templateHelper = new tmplHelper($this);
 $templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->template . '/js/bootstrap.min.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
-
+$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/scroll-watcher.js');
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +77,8 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                      data-max-height="<?php echo $this->params->get('image_max_height'); ?>"
                      id="<?php echo $this->params->get('div_id'); ?>" data-extra-height="0">
                 <section id="slider-carousel-row">
-                    <div  class="container">
+                    <div class="light-ruler-top"></div>
+                    <div class="container">
                         <div id="home-slides" class="carousel slide" data-ride="carousel" data-interval="8000">
                             <?php if ($this->params->get('showtitles', 0)): ?>
                                 <div class="carousel-titles">
@@ -103,6 +104,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                             </a>
                         </div>
                     </div>
+                    <div class="light-ruler-bottom"></div>
                 </section>
             </section>
         <?php endif; ?>
