@@ -1776,6 +1776,9 @@ fieldset[disabled] .learn-more {
 .page-headline {
   color: #fff;
 }
+.eq-height h1 {
+  margin-top: 0px;
+}
 .about-pason,
 .customer-support,
 .page-headline {
@@ -7749,9 +7752,6 @@ main .hasRight #main-content {
 }
 .product-detail .page-header {
   border-bottom: 0px none;
-}
-.product-detail .product-header-inner {
-  margin-top: 70px;
 }
 footer {
   font-size: 14px;

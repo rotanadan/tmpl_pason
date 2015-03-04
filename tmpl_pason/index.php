@@ -22,6 +22,7 @@ $templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->tem
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/scroll-watcher.js');
+$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/heightCenter.js');
 ?>
 
 <!DOCTYPE html>
