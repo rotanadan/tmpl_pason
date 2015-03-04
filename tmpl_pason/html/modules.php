@@ -46,7 +46,8 @@ function modChrome_featured($module, $params, $attribs)
     echo            '<h5>' . $title . '</h5>';
     echo            '<img src="/images/down-arrow.png" />';
     echo        '</div>';
-    echo        '<div class="featured-solution-content">';
+    echo        '<div class="featured-solution-content"><div class="screen-over"></div>';
+
     echo            $module->content;
     echo        '</div>';
     echo    '</div>';

@@ -7784,7 +7784,7 @@ footer a {
   display: table;
 }
 #featured-solutions {
-  margin-top: -77px;
+  margin-top: -73px;
   min-height: 240px;
 }
 #featured-solutions .featured-solution {
@@ -7800,20 +7800,40 @@ footer a {
   }
 }
 #featured-solutions .featured-solution-inner {
-  border: 6px #fff solid;
+  overflow: hidden;
+}
+#featured-solutions .featured-solution-inner:hover {
+  overflow: hidden;
+}
+#featured-solutions .featured-solution-inner:hover .featured-solution-title {
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  border-top: 6px #05dcf6 solid;
+  border-left: 6px #05dcf6 solid;
+  border-right: 6px #05dcf6 solid;
+}
+#featured-solutions .featured-solution-inner:hover .featured-solution-content .screen-over {
+  border-bottom: 6px #05dcf6 solid;
+  border-left: 6px #05dcf6 solid;
+  border-right: 6px #05dcf6 solid;
   -webkit-transition: 0.5s ease-out;
   -moz-transition: 0.5s ease-out;
   -o-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
 }
-#featured-solutions .featured-solution-inner:hover {
-  border: 6px #05dcf6 solid;
-  overflow: hidden;
-}
 #featured-solutions .featured-solution-title {
-  background: #fff;
-  padding: 7px 15px;
   text-transform: uppercase;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  border-top: 6px transparent solid;
+  border-left: 6px transparent solid;
+  border-right: 6px transparent solid;
+  background: #fff;
+  padding: 5px 10px 5px 10px;
 }
 #featured-solutions .featured-solution-title h5 {
   font-size: 14px;
@@ -7821,11 +7841,25 @@ footer a {
   margin: 0px;
 }
 #featured-solutions .featured-solution-content {
-  margin: 0 -5px -5px -5px;
+  position: relative;
   -webkit-transition: 0.5s ease-out;
   -moz-transition: 0.5s ease-out;
   -o-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+}
+#featured-solutions .featured-solution-content .screen-over {
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-bottom: 6px transparent solid;
+  border-left: 6px transparent solid;
+  border-right: 6px transparent solid;
 }
 #featured-solutions .featured-solution-content p {
   margin: 0px;
