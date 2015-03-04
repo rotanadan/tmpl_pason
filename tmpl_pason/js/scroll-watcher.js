@@ -35,8 +35,6 @@ jQuery(document).ready(function($){
      */
     function makeScroll(element, direction)
     {
-        console.log(typeof element);
-
         // our ruler is our element
         var rule = element;
 
