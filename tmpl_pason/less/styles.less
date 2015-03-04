@@ -111,10 +111,50 @@ header {
   .ruler-bg-bottom();
 }
 
+.dark-ruler-top {
+  background: url('../images/ruler-bg-up.png') repeat-x;
+  padding-top: 10px;
+  width: 100%;
+  height: 10px;
+  margin-top: 50px;
+  position: relative;
+  content: " ";
+  display: table;
+}
+
+.dark-ruler-bottom {
+  background: url('../images/ruler-bg-down.png') repeat-x;
+  padding-top: 10px;
+  width: 100%;
+  height: 10px;
+  margin-bottom: 50px;
+  position: relative;
+  content: " ";
+  display: table;
+}
+
+.gray-ruler-top {
+  background: url('../images/ruler-bg-up-gray.png') repeat-x;
+  padding-top: 10px;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  content: " ";
+  display: table;
+}
+
+.orange-ruler-bottom {
+  content: " ";
+  background: url('../images/ruler-bg-down-orange.png') repeat-x;
+  height: 5px;
+  width: 100%;
+  position: relative;
+  display: table;
+}
+
 
 .page-headline-inner {
-  .ruler-bg-top();
-  .ruler-bg-bottom();
+
   .container {
     padding-bottom: 20px;
   }
@@ -424,18 +464,7 @@ main {
 
 .product-detail {
   .page-header {
-
     border-bottom: 0px none;
-  }
-  .product-header-row {
-    &:after {
-      content: " ";
-      background: url('../images/ruler-bg-down-orange.png') repeat-x;
-      height: 5px;
-      width: 100%;
-      position: relative;
-      display: block;
-    }
   }
 
   .product-header-inner {
@@ -458,41 +487,7 @@ footer {
   a {
     color: #565658;
   }
-  &:before {
-    background: url('../images/ruler-bg-up-gray.png') repeat-x !important;
-    padding-top: 10px;
-    width: 100%;
-    height: 10px;
-    position: relative;
-    content: " ";
-    display: table;
-  }
 }
-
-.customer-support-row,
-.about-pason-row {
-  &:before {
-    background: url('../images/ruler-bg-up.png') repeat-x !important;
-    padding-top: 10px;
-    width: 100%;
-    height: 10px;
-    margin-top: 50px;
-    position: relative;
-    content: " ";
-    display: table;
-  }
-  &:after {
-    background: url('../images/ruler-bg-down.png') repeat-x !important;
-    padding-top: 10px;
-    width: 100%;
-    height: 10px;
-    margin-bottom: 50px;
-    position: relative;
-    content: " ";
-    display: table;
-  }
-}
-
 
 .ruler-bg-top {
     background: url('../images/ruler-bg-up-light.png') repeat-x;

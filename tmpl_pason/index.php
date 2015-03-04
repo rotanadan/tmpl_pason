@@ -162,6 +162,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
 
         <?php if ($this->countModules('footer')): ?>
             <footer>
+                <div class="gray-ruler-top"></div>
                 <div class="container">
                     <div class="footer-row">
                         <jdoc:include type="modules" name="footer" style="" />

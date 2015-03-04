@@ -2,8 +2,32 @@ jQuery(document).ready(function($){
 
     // attach to the scroll function
     $(window).scroll(function() {
-        makeScroll($('.light-ruler-top'), 'right');
-        makeScroll($('.light-ruler-bottom'), 'left');
+
+        if ($('.orange-ruler-bottom').length) {
+            makeScroll($('.orange-ruler-bottom'), 'right');
+        }
+
+        if ($('.light-ruler-top').length) {
+            makeScroll($('.light-ruler-top'), 'right');
+        }
+
+        if ($('.light-ruler-bottom').length) {
+            makeScroll($('.light-ruler-bottom'), 'left');
+        }
+
+        if ($('.dark-ruler-top').length) {
+            makeScroll($('.dark-ruler-top'), 'left');
+        }
+
+        if ($('.dark-ruler-bottom').length) {
+            makeScroll($('.dark-ruler-bottom'), 'right');
+        }
+
+        if ($('.gray-ruler-top').length) {
+            makeScroll($('.gray-ruler-top'), 'left');
+        }
+
+
     });
 
     /*
@@ -11,8 +35,15 @@ jQuery(document).ready(function($){
      */
     function makeScroll(element, direction)
     {
+        console.log(typeof element);
+
         // our ruler is our element
         var rule = element;
+
+        if (! rule )
+        {
+            return;
+        }
 
         var ruler_css = rule.css('backgroundPosition');
 
