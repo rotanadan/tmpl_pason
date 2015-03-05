@@ -13,6 +13,46 @@
   transition:         @duration ease-out;
 }
 
+.magnify-link {
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: normal;
+  .transition(.5s ease out);
+
+  .mag-icon {
+    display: block;
+    height: 20px;
+    position: relative;
+    text-align: center;
+    margin: 0 5px;
+    &:after {
+      content: "";
+      border-top: 1px solid @pason-cyan;
+      .transition(.5s ease out);
+      height: 5px;
+      display: block;
+      width: 100%;
+      margin-top: -12px;
+    }
+    img {
+      padding: 0px 4px 0px 8px;
+      background: #fff;
+    }
+  }
+  &:hover, &:focus {
+    color: #000;
+    .transition(.5s ease out);
+    text-decoration: none;
+    .mag-icon {
+      &:after {
+        .transition(.5s ease out);
+        border-top: 1px solid #c9cacc;
+      }
+    }
+  }
+}
+
 
 .make-link(@color, @hover-color, @bg-hover-color) {
   color: @color;

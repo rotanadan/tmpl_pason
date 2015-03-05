@@ -90,18 +90,12 @@ header {
       height: 8px;
       display: block;
     }
-    .carousel-indicators {
-      bottom: auto;
-      top: 10px;
-      right: 0px;
-      left: auto;
-    }
+  }
+  .carousel-inner {
+    padding-bottom: 20px;
   }
 }
 
-#slider-carousel-row {
-
-}
 
 .light-ruler-top {
   .ruler-bg-top();
@@ -140,6 +134,15 @@ header {
   height: 10px;
   position: relative;
   content: " ";
+  display: table;
+}
+
+.orange-ruler-top {
+  content: " ";
+  background: url('../images/ruler-bg-up-orange.png') repeat-x;
+  height: 5px;
+  width: 100%;
+  position: relative;
   display: table;
 }
 
@@ -261,7 +264,11 @@ header {
 
 main {
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
+
+  aside {
+    padding-top: 5px;
+  }
 
   .main-row, .products-list {
     .make-row();
@@ -455,10 +462,10 @@ main {
   .make-row();
   position: relative;
   &.single {
-    margin-top: -144px;
+    margin-top: -120px;
   }
   &.double {
-    margin-top: -144px;
+    margin-top: -120px;
   }
 }
 

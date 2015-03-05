@@ -7,11 +7,7 @@ jQuery(document).ready(function($) {
     function heightCenter(container) {
         var outerHeight = container.height();
 
-        console.log(container);
-
         var inner = $('div', container).first();
-
-        console.log(inner);
 
         var innerHeight = inner.height();
 
