@@ -314,20 +314,29 @@ header {
   font-size: 14px;
   #mini-nav-section {
     nav {
-      li {
-        border-right: 1px solid @pason-cyan;
-        a {
-          //.make-link(@pason-cyan, #fff, @pason-cyan);
-          color: @pason-cyan;
-          padding: 8px 15px 7px 15px;
+     > ul {
+        > li {
+          border-right: 1px solid @pason-cyan;
+          > a {
+            //.make-link(@pason-cyan, #fff, @pason-cyan);
+            color: @pason-cyan;
+            padding: 8px 15px 7px 15px;
 
-          &:hover, &:focus {
-            color: #fff;
-            background-color: @pason-cyan;
+            &:hover, &:focus {
+              color: #fff;
+              background: transparent;
+            }
           }
-        }
-        &:last-child {
-          border-right: 0 none;
+          &:last-child {
+            border-right: 0 none;
+            background-color: @pason-cyan;
+            > a {
+                color: #fff;
+              }
+            &:hover, &:focus {
+              background-color: @pason-cyan;
+            }
+          }
         }
       }
     }

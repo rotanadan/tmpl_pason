@@ -1504,20 +1504,28 @@ body {
 header {
   font-size: 14px;
 }
-header #mini-nav-section nav li {
+header #mini-nav-section nav > ul > li {
   border-right: 1px solid #05dcf6;
 }
-header #mini-nav-section nav li a {
+header #mini-nav-section nav > ul > li > a {
   color: #05dcf6;
   padding: 8px 15px 7px 15px;
 }
-header #mini-nav-section nav li a:hover,
-header #mini-nav-section nav li a:focus {
+header #mini-nav-section nav > ul > li > a:hover,
+header #mini-nav-section nav > ul > li > a:focus {
   color: #fff;
+  background: transparent;
+}
+header #mini-nav-section nav > ul > li:last-child {
+  border-right: 0 none;
   background-color: #05dcf6;
 }
-header #mini-nav-section nav li:last-child {
-  border-right: 0 none;
+header #mini-nav-section nav > ul > li:last-child > a {
+  color: #fff;
+}
+header #mini-nav-section nav > ul > li:last-child:hover,
+header #mini-nav-section nav > ul > li:last-child:focus {
+  background-color: #05dcf6;
 }
 header #main-nav-section {
   font-weight: 400;
@@ -6941,8 +6949,52 @@ header #mini-nav-section {
   height: 30px;
   font-size: 11px;
 }
-header #mini-nav-section nav li {
+header #mini-nav-section #mini-nav {
+  background: #000;
+}
+header #mini-nav-section ul.nav > li {
   float: left;
+}
+header #mini-nav-section .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+header #mini-nav-section .dropdown-menu > li {
+  position: relative;
+  background: #05dcf6;
+  margin-top: -1px;
+}
+header #mini-nav-section .dropdown-menu > li > a {
+  padding: 5px 57px 5px 8px;
+  color: #fff;
+  background: url('../images/menu-dropdown-plus-icon.png') no-repeat 93% 50%;
+}
+header #mini-nav-section .dropdown-menu > li :before {
+  content: "";
+  background: url('../images/menu-dropdown-bg-left.png') no-repeat;
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 31px;
+  left: 0px;
+  top: 0px;
+}
+header #mini-nav-section .dropdown-menu > li :after {
+  content: "";
+  background: url('../images/menu-dropdown-bg-right.png') no-repeat;
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 31px;
+  top: 0px;
+  right: 0px;
 }
 header #main-nav-section .navbar {
   margin-bottom: 10px;
@@ -6953,6 +7005,7 @@ header #main-nav-section .navbar-brand {
 }
 header #main-nav-section #main-nav {
   padding-top: 6px;
+  margin-right: -30px;
 }
 .main-banner-slides .next-toggle,
 .main-banner-slides .previous-toggle {
@@ -7162,6 +7215,13 @@ header #main-nav-section #main-nav {
 #product-info-links > li > a > img {
   max-width: none;
 }
+#product-info-links .separator {
+  color: #05dcf6;
+  padding: 8px 15px 7px 15px;
+  line-height: 20px;
+  display: block;
+  cursor: pointer;
+}
 #product-info-links > li {
   margin-bottom: 10px;
 }
@@ -7245,6 +7305,13 @@ header #main-nav-section #main-nav {
 }
 .sidebar-nav > li > a > img {
   max-width: none;
+}
+.sidebar-nav .separator {
+  color: #05dcf6;
+  padding: 8px 15px 7px 15px;
+  line-height: 20px;
+  display: block;
+  cursor: pointer;
 }
 .sidebar-nav > li {
   margin-bottom: 10px;
@@ -7508,6 +7575,13 @@ main .hasRight #main-content {
 .product-categoires-inline > li > a > img {
   max-width: none;
 }
+.product-categoires-inline .separator {
+  color: #05dcf6;
+  padding: 8px 15px 7px 15px;
+  line-height: 20px;
+  display: block;
+  cursor: pointer;
+}
 .product-categoires-inline > li {
   float: left;
 }
@@ -7581,6 +7655,13 @@ main .hasRight #main-content {
 }
 .product-categoires-inline > li > a > img {
   max-width: none;
+}
+.product-categoires-inline .separator {
+  color: #05dcf6;
+  padding: 8px 15px 7px 15px;
+  line-height: 20px;
+  display: block;
+  cursor: pointer;
 }
 .product-categoires-inline > li {
   margin-bottom: 10px;
@@ -8319,6 +8400,14 @@ footer a {
 }
 .icon-search:before {
   content: "\e003";
+}
+.nav .separator,
+nav .separator {
+  color: #05dcf6;
+  padding: 8px 15px 7px 15px;
+  line-height: 20px;
+  display: block;
+  cursor: pointer;
 }
 .main-banner-slides .img-holder-img {
   max-height: 543px;

@@ -54,4 +54,26 @@ jQuery(document).ready(function($){
         indicators.append('<li data-target="#home-slides" data-slide-to="' + index + '" ' + classParam + '></li>');
 
     });
+
+    $('.nav .parent').each(function(i) {
+
+        var link = $('a', $(this));
+
+        //link.addClass('dropdown-toggle');
+
+        //link.attr('data-target', '#dropdown-' + i);
+
+        //link.attr('data-toggle', 'dropdown');
+
+        var dropdown = $('.nav-child', $(this));
+
+        dropdown.addClass('dropdown-menu');
+
+        //dropdown.attr('id', 'dropdown-' + i);
+
+
+        $(this).click(function(){
+            $(this).toggleClass('open');
+        })
+    });
 });
