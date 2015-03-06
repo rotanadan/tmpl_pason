@@ -16,7 +16,6 @@ jQuery(document).ready(function($) {
         var topBottomPadding = distance / 2;
         var padCss = topBottomPadding + 'px';
 
-        console.log(padCss);
         inner.css('padding-top', padCss);
         inner.css('padding-bottom', padCss);
     }
