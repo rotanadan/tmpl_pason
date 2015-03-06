@@ -20,12 +20,12 @@ defined('_JEXEC') or die;
 
 		<div class ="col-md-12">
 			<?php $images = json_decode($item->images); ?>
-				<img src="<?php echo $images->image_intro; ?>"/>
+				<img src="<?php echo $images->image_intro; ?>" style="margin-right: 5px"/>
 
 			<?php $urls = json_decode($item->urls); ?>
 
 			<?php if ($params->get('link_titles') == 1) : ?>
-				<a href="<?php echo $urls->urla; ?>">
+				<a href="<?php echo $urls->urla; ?>" class="magnify-link">
 					<?php echo $item->title; ?>
 				</a>
 			<?php else : ?>
