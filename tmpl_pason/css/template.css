@@ -1859,8 +1859,7 @@ footer .navbar-nav > li > a {
 footer .navbar-nav > li > a:hover,
 footer .navbar-nav > li > a:focus {
   background: transparent;
-  text-decoration: underline;
-  color: #000;
+  color: #05dcf6;
 }
 footer .navbar-nav > li:last-child > a {
   border-right: 0px none;
