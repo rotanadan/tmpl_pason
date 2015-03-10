@@ -7908,7 +7908,7 @@ footer a {
   height: 20px;
   position: relative;
   text-align: center;
-  margin: 0 5px;
+  margin: 5px 5px 0px 5px;
 }
 .magnify-link .mag-icon:after {
   content: "";
