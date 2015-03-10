@@ -13,6 +13,25 @@ header {
     // inline menu
     ul.nav > li {
       float: left;
+      a {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 11px;
+          width: 1px;
+          border-left: 1px solid #05dcf6;
+          display: block;
+          left: 0px;
+          top: 11px;
+        }
+
+      }
+      &:first-child {
+        a:before {
+          border-left: 0px none;
+        }
+      }
     }
 
     // fonts

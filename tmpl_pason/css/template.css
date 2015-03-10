@@ -1504,9 +1504,6 @@ body {
 header {
   font-size: 14px;
 }
-header #mini-nav-section nav > ul > li {
-  border-right: 1px solid #05dcf6;
-}
 header #mini-nav-section nav > ul > li > a {
   color: #05dcf6;
   padding: 8px 15px 7px 15px;
@@ -6954,6 +6951,22 @@ header #mini-nav-section #mini-nav {
 }
 header #mini-nav-section ul.nav > li {
   float: left;
+}
+header #mini-nav-section ul.nav > li a {
+  position: relative;
+}
+header #mini-nav-section ul.nav > li a:before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 1px;
+  border-left: 1px solid #05dcf6;
+  display: block;
+  left: 0px;
+  top: 11px;
+}
+header #mini-nav-section ul.nav > li:first-child a:before {
+  border-left: 0px none;
 }
 header #mini-nav-section .dropdown-menu {
   position: absolute;
