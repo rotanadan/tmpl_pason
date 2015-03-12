@@ -138,10 +138,16 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             <div class="container <?php echo $templateHelper->getSidebarClasses(); ?>">
                 <div class="main-row">
                     <section id="main-content">
-                        <jdoc:include type="modules" name="above-content" style="html5" />
-                        <jdoc:include type="message" />
-                        <jdoc:include type="component" />
-                        <jdoc:include type="modules" name="below-content" style="html5" />
+                        <section class="above-content-row">
+                            <jdoc:include type="modules" name="above-content" style="html5" />
+                        </section>
+                        <section id="content">
+                            <jdoc:include type="message" />
+                            <jdoc:include type="component" />
+                        </section>
+                        <section class="below-content-row">
+                            <jdoc:include type="modules" name="below-content" style="html5" />
+                        </section>
                     </section>
 
                     <?php if($this->countModules('left') || $this->countModules('sidebar')): ?>
@@ -156,7 +162,6 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                             <jdoc:include type="modules" name="right" style="html5" />
                         </aside>
                     <?php endif; ?>
-
                 </div>
             </div>
         </main>
