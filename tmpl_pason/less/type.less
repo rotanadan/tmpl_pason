@@ -344,42 +344,54 @@ header {
   // style the main nav
   #main-nav-section {
     font-weight: 400;
-    #main-nav  li  > a {
-      color: #000;
-      padding: 8px 8px;
-      text-transform: uppercase;
-      &:hover, &:focus {
-        color: #000;
-        background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat 50% bottom transparent;
-
-        &:before {
-          content: "[";
-          font-size: 18px;
-          padding-right: 2px;
-          font-family: @font-family-monospace;
-          color: @pason-orange;
+    #main-nav {
+      li {
+        > a {
+          color: #000;
+          padding: 8px 8px;
+          text-transform: uppercase;
+          &:hover, &:focus {
+            .main-nav-selected();
+          }
+          &:before, {
+            content: "\00a0";
+            font-size: 18px;
+            padding-right: 2px;
+            font-family: @font-family-monospace;
+          }
+          &:after {
+            content: "\00a0";
+            font-size: 18px;
+            padding-left: 2px;
+            font-family: @font-family-monospace;
+          }
         }
-        &:after {
-          content: "]";
-          font-size: 18px;
-          padding-left: 2px;
-          font-family: @font-family-monospace;
-          color: @pason-orange;
+        // active li
+        &.active a {
+          .main-nav-selected();
         }
-      }
-      &:before, {
-        content: "\00a0";
-        font-size: 18px;
-        padding-right: 2px;
-        font-family: @font-family-monospace;
-      }
-      &:after {
-        content: "\00a0";
-        font-size: 18px;
-        padding-left: 2px;
-        font-family: @font-family-monospace;
       }
     }
+  }
+}
+
+// selected state for main nav. useful for hover / focus / .active
+.main-nav-selected {
+  color: #000;
+  background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat 50% bottom transparent;
+  &:before {
+    content: "[";
+    font-size: 18px;
+    padding-right: 2px;
+    font-family: @font-family-monospace;
+    color: @pason-orange;
+  }
+  &:after {
+    content: "]";
+    font-size: 18px;
+    padding-left: 2px;
+    font-family: @font-family-monospace;
+    color: @pason-orange;
   }
 }
 
