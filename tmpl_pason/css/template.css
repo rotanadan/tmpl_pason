@@ -1702,15 +1702,13 @@ header #main-nav-section #main-nav li > a:after {
   color: #f47f20;
 }
 .product-header-inner h1 {
-  border-bottom: 1px solid #fff;
   text-transform: uppercase;
-  border-bottom: 1px solid #565658;
   color: #565658;
   text-transform: none;
   font-weight: normal;
 }
 .product-header-inner h1:after {
-  border-top: 1px solid #fff;
+  border: 1px solid #fff;
   content: "";
   display: block;
   width: 100%;
@@ -1718,7 +1716,7 @@ header #main-nav-section #main-nav li > a:after {
   margin-top: 5px;
 }
 .product-header-inner h1:after {
-  border-top: 1px solid #565658;
+  border: 1px solid #565658;
 }
 .product-header-inner h3 {
   color: #565658;
@@ -1798,13 +1796,12 @@ fieldset[disabled] .learn-more {
 .about-pason h1,
 .customer-support h1,
 .page-headline h1 {
-  border-bottom: 1px solid #fff;
   text-transform: uppercase;
 }
 .about-pason h1:after,
 .customer-support h1:after,
 .page-headline h1:after {
-  border-top: 1px solid #fff;
+  border: 1px solid #fff;
   content: "";
   display: block;
   width: 100%;
@@ -1865,11 +1862,10 @@ footer .navbar-nav > li:last-child > a {
   border-right: 0px none;
 }
 .double-line {
-  border-bottom: 1px solid #fff;
   text-transform: uppercase;
 }
 .double-line:after {
-  border-top: 1px solid #fff;
+  border: 1px solid #fff;
   content: "";
   display: block;
   width: 100%;
@@ -6656,6 +6652,8 @@ main .main-row:before,
 main .main-row:after,
 main .products-list:before,
 main .products-list:after,
+.below-content-row:before,
+.below-content-row:after,
 .product-categoires-inline:before,
 .product-categoires-inline:after,
 .product-categoires-inline:before,
@@ -6688,6 +6686,7 @@ main .products-list:after,
 .sidebar-nav:after,
 main .main-row:after,
 main .products-list:after,
+.below-content-row:after,
 .product-categoires-inline:after,
 .product-categoires-inline:after,
 .product-title-row:after,
@@ -7538,6 +7537,13 @@ main .hasRight #main-content {
     float: left;
     width: 66.66666667%;
   }
+}
+#content {
+  padding-bottom: 30px;
+}
+.below-content-row {
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .product-categoires-inline {
   width: 100%;
