@@ -1565,6 +1565,42 @@ header #main-nav-section #main-nav li > a:after {
   padding-left: 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+header #main-nav-section #main-nav li.active a {
+  color: #000;
+  background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat 50% bottom transparent;
+}
+header #main-nav-section #main-nav li.active a:before {
+  content: "[";
+  font-size: 18px;
+  padding-right: 2px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #f47f20;
+}
+header #main-nav-section #main-nav li.active a:after {
+  content: "]";
+  font-size: 18px;
+  padding-left: 2px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #f47f20;
+}
+.main-nav-selected {
+  color: #000;
+  background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat 50% bottom transparent;
+}
+.main-nav-selected:before {
+  content: "[";
+  font-size: 18px;
+  padding-right: 2px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #f47f20;
+}
+.main-nav-selected:after {
+  content: "]";
+  font-size: 18px;
+  padding-left: 2px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #f47f20;
+}
 .main-banner-slides {
   color: #fff;
 }
