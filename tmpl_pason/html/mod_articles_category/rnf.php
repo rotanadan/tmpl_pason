@@ -10,17 +10,18 @@
 defined('_JEXEC') or die;
 
 ?>
-
+<?php if ($params->get('showtitle')): ?>
 <h5>
 	<?php echo $module->title; ?>
 </h5>
+<?php endif; ?>
 
 <div class="row">
 	<?php foreach ($list as $item) : ?>
 
 		<div class ="col-md-12">
 			<?php $images = json_decode($item->images); ?>
-				<img src="<?php echo $images->image_intro; ?>" style="margin-right: 5px"/>
+				<img src="<?php echo JUri::root(); ?>/images/file-icon.png" style="margin-right: 5px;margin-bottom: 5px;"/>
 
 			<?php $urls = json_decode($item->urls); ?>
 
