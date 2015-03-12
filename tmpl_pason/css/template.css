@@ -7587,7 +7587,7 @@ main .hasRight #main-content {
   padding-left: 0;
   list-style: none;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 .product-categoires-inline > li {
@@ -7954,7 +7954,7 @@ footer a {
 }
 .magnify-link .mag-icon:after {
   content: "";
-  border-top: 1px solid #05dcf6;
+  border-top: 1px solid #c9cacc;
   -webkit-transition: 0.5s ease out;
   -o-transition: 0.5s ease out;
   transition: 0.5s ease out;
@@ -7980,7 +7980,7 @@ footer a {
   -webkit-transition: 0.5s ease out;
   -o-transition: 0.5s ease out;
   transition: 0.5s ease out;
-  border-top: 1px solid #c9cacc;
+  border-top: 1px solid #05dcf6;
 }
 #featured-solutions {
   margin-top: -73px;
