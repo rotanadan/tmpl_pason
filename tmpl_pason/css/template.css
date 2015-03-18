@@ -7175,6 +7175,7 @@ header #main-nav-section #main-nav {
 }
 .main-banner-slides #home-slides {
   padding-bottom: 20px;
+  min-height: 270px;
 }
 #home-slides .indicator-titles {
   position: relative;
