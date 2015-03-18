@@ -1663,7 +1663,7 @@ header #main-nav-section #main-nav li.active a:after {
   text-align: left;
 }
 .home .page-header {
-  margin: 0px;
+  margin-bottom: 30px;
   border-bottom: 0 none;
 }
 .home .page-header h1 {
@@ -1680,12 +1680,21 @@ header #main-nav-section #main-nav li.active a:after {
 .home .page-header h1:before {
   content: "";
   display: block;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
-  width: 100%;
+  border: solid 1px black;
+  width: 37%;
   height: 5px;
   position: absolute;
   top: 43%;
+}
+.home .page-header h1:after {
+  content: "";
+  display: block;
+  border: solid 1px black;
+  width: 37%;
+  height: 5px;
+  position: absolute;
+  top: 43%;
+  right: 0px;
 }
 .home main .item-intro-inner {
   color: #fff;
@@ -1695,6 +1704,7 @@ header #main-nav-section #main-nav li.active a:after {
 .home main .item-intro-inner h3,
 .home main .item-intro-inner h4 {
   margin-top: 0px;
+  margin-bottom: 40px;
   font-size: 88%;
 }
 .home main .item-intro-inner .readmore {
@@ -1702,6 +1712,34 @@ header #main-nav-section #main-nav li.active a:after {
 }
 .home main .item-intro-inner .readmore > a {
   color: #fff;
+}
+.home main .item-intro-inner .readmore > a .icon-chevron-right {
+  background: url('../images/learn-more-arrow.png');
+  height: 16px;
+  width: 20px;
+  display: block;
+  margin-top: 5px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  margin-right: 7px;
+  float: right !important;
+  margin-top: 0px;
+}
+.home main .item-intro-inner .readmore > a:hover .icon-chevron-right,
+.home main .item-intro-inner .readmore > a:focus .icon-chevron-right {
+  background: url('../images/learn-more-arrow-hover.png');
+  margin-right: 0px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  background: url('../images/learn-more-arrow.png');
+  float: right !important;
+  margin-top: 0px;
 }
 .home main .item-intro-inner {
   font-size: 14px;
@@ -1715,7 +1753,7 @@ header #main-nav-section #main-nav li.active a:after {
   text-transform: uppercase;
 }
 .home main .btn {
-  padding: 6px 0px;
+  padding: 11px 0px;
 }
 /* align the phone number to the top right */
 #customer-phone {
@@ -1831,7 +1869,30 @@ fieldset[disabled] .learn-more {
   transition: all 0.7s ease-out;
   margin-right: 7px;
 }
-.learn-more:hover .learn-more-arrow {
+.learn-more:hover .learn-more-arrow,
+.learn-more:focus .learn-more-arrow {
+  background: url('../images/learn-more-arrow-hover.png');
+  margin-right: 0px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+.make-learn-more {
+  background: url('../images/learn-more-arrow.png');
+  height: 16px;
+  width: 20px;
+  display: block;
+  margin-top: 5px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  margin-right: 7px;
+}
+.make-learn-more-hover {
   background: url('../images/learn-more-arrow-hover.png');
   margin-right: 0px;
   -webkit-transition: all 0.7s ease-out;
