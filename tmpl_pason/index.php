@@ -96,11 +96,11 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
 
                             <!-- Controls -->
                             <a class="previous-toggle carousel-control" href="#home-slides" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                                <span class="bs-carousel-arrow-left" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
                             <a class="next-toggle carousel-control" href="#home-slides" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                                <span class="bs-carousel-arrow-right" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>

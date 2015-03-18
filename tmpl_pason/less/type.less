@@ -575,6 +575,18 @@ header {
   padding: 10px 0px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  .learn-more-arrow {
+    background: url('../images/learn-more-arrow.png');
+    height: 16px;
+    width: 20px;
+    display: block;
+    margin-top: 5px;
+  }
+  &:hover {
+    .learn-more-arrow {
+      background: url('../images/learn-more-arrow-hover.png');
+    }
+  }
 }
 
 .page-headline {
@@ -618,16 +630,7 @@ header {
     padding-bottom: 5px;
     margin-bottom: 0px;
   }
-  .glyphicon-plus-sign {
-    border-right: 1px solid #c9cacc;
-    border-left: 1px solid #c9cacc;
-    background: #f2f2f2;
-    padding: 8px 7px 8px 7px;
-    top: -5px;
-    &:after {
-      font-size: 10px;
-    }
-  }
+
   .nav > li {
     border-bottom: 1px solid #c9cacc;
     > a {
@@ -635,8 +638,33 @@ header {
       font-size: 14px;
       color: #000;
       text-transform: uppercase;
+      &:hover, &:focus {
+        background: transparent;
+        color: @pason-orange;
+      }
+    }
+    .plus-icon-rounded {
+      background: url('../images/plus-icon-rounded.png') no-repeat #f2f2f2 center;
+      float: right !important;
+      padding: 17px;
+      border-left: 1px solid #c9cacc;
+      border-right: 1px solid #c9cacc;
+      margin-top: -5px;
+      .pull-right();
+
+    }
+    &:hover, &:focus {
+      a {
+        background: transparent;
+        color: @pason-orange;
+      }
+      .plus-icon-rounded {
+        background: url('../images/plus-icon-rounded-hover.png') no-repeat #f2f2f2 center;
+      }
     }
   }
+
+
 }
 
 aside {

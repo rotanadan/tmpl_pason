@@ -1818,6 +1818,16 @@ fieldset[disabled] .learn-more {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.learn-more .learn-more-arrow {
+  background: url('../images/learn-more-arrow.png');
+  height: 16px;
+  width: 20px;
+  display: block;
+  margin-top: 5px;
+}
+.learn-more:hover .learn-more-arrow {
+  background: url('../images/learn-more-arrow-hover.png');
+}
 .page-headline {
   color: #fff;
 }
@@ -1860,16 +1870,6 @@ fieldset[disabled] .learn-more {
   padding-bottom: 5px;
   margin-bottom: 0px;
 }
-.compatible-products-list .glyphicon-plus-sign {
-  border-right: 1px solid #c9cacc;
-  border-left: 1px solid #c9cacc;
-  background: #f2f2f2;
-  padding: 8px 7px 8px 7px;
-  top: -5px;
-}
-.compatible-products-list .glyphicon-plus-sign:after {
-  font-size: 10px;
-}
 .compatible-products-list .nav > li {
   border-bottom: 1px solid #c9cacc;
 }
@@ -1878,6 +1878,28 @@ fieldset[disabled] .learn-more {
   font-size: 14px;
   color: #000;
   text-transform: uppercase;
+}
+.compatible-products-list .nav > li > a:hover,
+.compatible-products-list .nav > li > a:focus {
+  background: transparent;
+  color: #f47f20;
+}
+.compatible-products-list .nav > li .plus-icon-rounded {
+  background: url('../images/plus-icon-rounded.png') no-repeat #f2f2f2 center;
+  padding: 17px;
+  border-left: 1px solid #c9cacc;
+  border-right: 1px solid #c9cacc;
+  margin-top: -5px;
+  float: right !important;
+}
+.compatible-products-list .nav > li:hover a,
+.compatible-products-list .nav > li:focus a {
+  background: transparent;
+  color: #f47f20;
+}
+.compatible-products-list .nav > li:hover .plus-icon-rounded,
+.compatible-products-list .nav > li:focus .plus-icon-rounded {
+  background: url('../images/plus-icon-rounded-hover.png') no-repeat #f2f2f2 center;
 }
 aside {
   font-size: 14px;
@@ -8484,4 +8506,27 @@ nav .separator {
   margin-top: 21px;
   margin-bottom: 21px;
   color: #565658;
+}
+.carousel-control {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  bottom: auto;
+}
+.carousel-control .bs-carousel-arrow-left {
+  background: url('../images/bs-carousel-arrow-left.png') no-repeat;
+  width: 22px;
+  height: 39px;
+  display: block;
+}
+.carousel-control .bs-carousel-arrow-right {
+  background: url('../images/bs-carousel-arrow-right.png') no-repeat;
+  width: 22px;
+  height: 39px;
+  display: block;
+}
+.carousel-control:hover .bs-carousel-arrow-right {
+  background: url('../images/bs-carousel-arrow-right-hover.png') no-repeat;
+}
+.carousel-control:hover .bs-carousel-arrow-left {
+  background: url('../images/bs-carousel-arrow-left-hover.png') no-repeat;
 }
