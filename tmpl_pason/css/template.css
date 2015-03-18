@@ -1824,9 +1824,21 @@ fieldset[disabled] .learn-more {
   width: 20px;
   display: block;
   margin-top: 5px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  margin-right: 7px;
 }
 .learn-more:hover .learn-more-arrow {
   background: url('../images/learn-more-arrow-hover.png');
+  margin-right: 0px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 .page-headline {
   color: #fff;
