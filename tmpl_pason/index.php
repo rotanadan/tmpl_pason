@@ -19,7 +19,7 @@ $templateHelper = new tmplHelper($this);
 
 // regiser the home.js file
 $templateHelper->registerDelayedScript(JUri::root() . '/templates/' . $this->template . '/js/bootstrap.min.js');
-$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.imageScroll.js');
+$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/parallax.min.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/scroll-watcher.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/heightCenter.js');
@@ -71,12 +71,12 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             </section>
         </header>
         <?php if($this->countModules('main-banner')): ?>
-            <section class="img-holder"
-                     data-image="<?php echo JUri::root() . $this->params->get('main_bg_image'); ?>"
-                     data-width="<?php echo $this->params->get('image_width'); ?>"
-                     data-height="<?php echo $this->params->get('image_height'); ?>"
-                     data-max-height="<?php echo $this->params->get('image_max_height'); ?>"
-                     id="<?php echo $this->params->get('div_id'); ?>" data-extra-height="0">
+            <section class="parallax-window img-holder main-banner-slides" style="min-height:545px"
+                     data-parallax="scroll"
+                     data-image-src="<?php echo JUri::root() . $this->params->get('main_bg_image'); ?>"
+                     data-natural-width="<?php echo $this->params->get('image_width'); ?>"
+                     data-natural-height="<?php echo $this->params->get('image_height'); ?>"
+                     id="<?php echo $this->params->get('div_id'); ?>">
                 <section id="slider-carousel-row">
                     <div class="light-ruler-top"></div>
                     <div class="container">

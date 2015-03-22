@@ -4,6 +4,7 @@
 
 jQuery(document).ready(function($){
 
+    /*
     // execute the parallax effect
     $('.img-holder').each(function() {
         var maxheight = $(this).attr('data-max-height');
@@ -14,6 +15,7 @@ jQuery(document).ready(function($){
             holderClass: className
         });
     });
+    */
 
     /*
      * tracks the carousel slider indicators and assigns an active class

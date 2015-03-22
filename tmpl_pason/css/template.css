@@ -1616,10 +1616,6 @@ header #main-nav-section #main-nav li.active a:after {
 .main-banner-slides .btn-link:hover {
   color: #05dcf6;
 }
-.main-banner-slides h1 {
-  font-weight: 100;
-  font-size: 70px;
-}
 .main-banner-slides .carousel-control {
   font-size: 80px;
 }
@@ -1695,6 +1691,10 @@ header #main-nav-section #main-nav li.active a:after {
   position: absolute;
   top: 43%;
   right: 0px;
+}
+.home #home-slides h1 {
+  font-weight: 100;
+  font-size: 70px;
 }
 .home main .item-intro-inner {
   color: #fff;
@@ -1907,19 +1907,19 @@ fieldset[disabled] .learn-more {
 .eq-height h1 {
   margin-top: 0px;
 }
-.about-pason,
-.customer-support,
-.page-headline {
+#about-pason,
+#customer-support,
+#page-headline {
   color: #fff;
 }
-.about-pason h1,
-.customer-support h1,
-.page-headline h1 {
+#about-pason h1,
+#customer-support h1,
+#page-headline h1 {
   text-transform: uppercase;
 }
-.about-pason h1:after,
-.customer-support h1:after,
-.page-headline h1:after {
+#about-pason h1:after,
+#customer-support h1:after,
+#page-headline h1:after {
   border: 1px solid #fff;
   content: "";
   display: block;
@@ -7213,11 +7213,10 @@ header #main-nav-section #main-nav {
   padding-bottom: 20px;
 }
 .light-ruler-top {
-  background: url('../images/ruler-bg-up-light.png') repeat-x;
-  padding-top: 20px;
+  background: url('../images/ruler-bg-up-light.png') repeat-x bottom;
   width: 100%;
   height: 13px;
-  margin-top: 45px;
+  padding-top: 45px;
   position: relative;
   content: " ";
   display: table;
@@ -8017,11 +8016,10 @@ footer a {
   color: #565658;
 }
 .ruler-bg-top {
-  background: url('../images/ruler-bg-up-light.png') repeat-x;
-  padding-top: 20px;
+  background: url('../images/ruler-bg-up-light.png') repeat-x bottom;
   width: 100%;
   height: 13px;
-  margin-top: 45px;
+  padding-top: 45px;
   position: relative;
   content: " ";
   display: table;
@@ -8083,7 +8081,7 @@ footer a {
   border-top: 1px solid #05dcf6;
 }
 #featured-solutions {
-  margin-top: -73px;
+  margin-top: -83px;
   min-height: 240px;
 }
 #featured-solutions .featured-solution {
