@@ -66,6 +66,11 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
+
+                            <span class="uk-button pull-right visible-xs" data-uk-offcanvas="{target:'#mobilenav'}">
+                                MENU
+                            </span>
+
                         </div>
                     </div>
                 </div>
@@ -180,5 +185,15 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
 
         <?php // defer loaded JS ?>
         <?php echo $templateHelper->getDelayedScriptsMarkup(); ?>
+
+
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/uikit.min.js"></script>
+        <!-- This is the off-canvas sidebar -->
+        <div id="mobilenav" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+                <jdoc:include type="modules" name="top" style="none" />
+            </div>
+        </div>
+
     </body>
 </html>
