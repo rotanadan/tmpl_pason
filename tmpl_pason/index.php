@@ -10,6 +10,7 @@ $params = $this->params;
 
 // Add Stylesheets
 $this->addStyleSheet(JUri::root() . '/templates/' . $this->template . '/css/template.css');
+$this->addStyleSheet(JUri::root() . '/templates/' . $this->template . '/css/custom.css');
 
 // load the template helper
 JLoader::register('tmplHelper', __DIR__ . '/tmplHelper.php');
@@ -114,7 +115,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             <section id="featured-solutions">
                 <div class="container">
                     <div class="row">
-                        <jdoc:include type="modules" name="featured-solution" style="featured" />
+                        <jdoc:include type="modules" name="featured-solution" style="" />
                     </div>
                 </div>
             </section>
