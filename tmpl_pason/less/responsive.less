@@ -81,3 +81,33 @@
     }
   }
 }
+//Fixed overlap - stack phone number
+#customer-phone {
+  @media screen and (max-width: 440px) {
+    position:static;
+  }
+}
+
+//fix bars on heading
+  .blog-featured {
+    .page-header {
+      h1 {
+
+        &:before, &:after {
+
+          @media screen and (max-width: @screen-sm-max) {
+            width: 30%;
+          }
+          @media screen and (max-width: @screen-xs-max) {
+            width: 25%;
+          }
+          @media screen and (max-width: 500px) {
+            width: 14%;
+          }
+          @media screen and (max-width: 400px) {
+            width: 7%;
+          }
+        }
+      }
+    }
+  }
