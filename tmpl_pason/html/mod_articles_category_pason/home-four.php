@@ -53,7 +53,9 @@ function titleBreak($title)
 					<h5 class="unbroken-title">
 						<?php echo $item->title; ?>
 					</h5>
-					<img src="<?php echo JUri::root(); ?>/images/down-arrow-lg.png"/>
+                    <span class="arrows">
+					    <img src="<?php echo JUri::root(); ?>/images/down-arrow-lg.png"/>
+                    </span>
 				</div>
 
 				<div class="featured-solution-content">

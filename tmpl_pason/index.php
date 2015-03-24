@@ -67,9 +67,9 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                 </button>
                             </div>
 
-                            <button class="uk-button pull-right visible-xs" data-uk-offcanvas="{target:'#mobilenav'}">
+                            <span class="uk-button pull-right visible-xs" data-uk-offcanvas="{target:'#mobilenav'}">
                                 MENU
-                            </button>
+                            </span>
 
                         </div>
                     </div>
@@ -190,7 +190,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/uikit.min.js"></script>
         <!-- This is the off-canvas sidebar -->
         <div id="mobilenav" class="uk-offcanvas">
-            <div class="uk-offcanvas-bar">
+            <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
                 <jdoc:include type="modules" name="top" style="none" />
             </div>
         </div>
