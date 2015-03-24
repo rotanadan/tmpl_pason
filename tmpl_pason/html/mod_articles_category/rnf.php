@@ -11,9 +11,12 @@ defined('_JEXEC') or die;
 
 ?>
 <?php if ($params->get('showtitle')): ?>
-<h5>
+<h5 class="broken-title">
 	<?php echo $module->title; ?>
 </h5>
+    <h5 class="unbroken-title">
+        <?php echo $item->title; ?>
+    </h5>
 <?php endif; ?>
 
 <div class="row">
