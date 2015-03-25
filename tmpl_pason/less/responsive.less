@@ -1,3 +1,35 @@
+// FIX ARROWS ON MAIN SLIDER
+.main-banner-slides {
+
+  @media screen and (max-width: 1360px) {
+    .next-toggle {
+      left: auto;
+      right: -20%;
+    }
+
+    .previous-toggle {
+      left: -10%;
+    }
+  }
+  @media screen and (max-width: 1060px) {
+    .next-toggle {
+      left: auto;
+      right: -20%;
+    }
+
+    .previous-toggle {
+      left: -5%;
+    }
+  }
+  @media screen and (max-width: @screen-sm-max) {
+    .previous-toggle, .next-toggle {
+      display: none;
+    }
+  }
+}
+
+
+//GENERAL RULES FOR MOBILE
 @media screen and (max-width: @screen-xs-max){
 
   .navbar-header{
@@ -28,9 +60,6 @@
 
 
   /// Carousel
-  .previous-toggle,.next-toggle{
-    display:none;
-  }
   .light-ruler-top,.light-ruler-bottom{
     display:none;
   }
@@ -103,7 +132,21 @@
       }
     }
   }
+
 }
+
+
+//HIDE LEFT COLUMN MENUS ON MOBILE
+@media screen and (max-width: @screen-sm-max) {
+  #left-column{
+    .moduletable_menu{
+      display:none;
+    }
+  }
+}
+
+
+
 //Fixed overlap - stack phone number
 #customer-phone {
   @media screen and (max-width: 440px) {
@@ -205,6 +248,56 @@
         a{
           color:#05dcf6;
         }
+      }
+    }
+  }
+}
+
+
+// SELECT SUB MENUS
+.above-content-row {
+  text-align: center;
+  .moduletable_menu {
+    &:before{
+      content: "";
+      background: url(../images/bracket80.png) no-repeat;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 80px;
+      z-index: 999;
+    }
+    &:after{
+      content: "";
+      background: url(../images/bracket80.png) no-repeat;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 80px;
+      z-index: 999;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+
+    position: relative;
+    select {
+      height: 80px;
+      text-indent: 10px;
+      background-color: #000000;
+      color: #FFFFFF;
+      border: none;
+      font-size:32px;
+      width:560px;
+      margin: 0 0 50px 0;
+      @media screen and (max-width: 600px) {
+        width:280px;
       }
     }
   }

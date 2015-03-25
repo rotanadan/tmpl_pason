@@ -24,6 +24,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/home.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/scroll-watcher.js');
 $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/heightCenter.js');
+$templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->template . '/js/jquery.mobile.custom.min.js');
 ?>
 
 <!DOCTYPE html>
@@ -200,6 +201,18 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 </div>
             </div>
         </div>
+
+<!--SWIPE-->
+        <script>
+            jQuery(document).ready(function() {
+                jQuery("#home-slides").swiperight(function() {
+                    jQuery(this).carousel('prev');
+                });
+                jQuery("#home-slides").swipeleft(function() {
+                    jQuery(this).carousel('next');
+                });
+            });
+        </script>
 
     </body>
 </html>
