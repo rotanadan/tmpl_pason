@@ -445,24 +445,19 @@ main {
   .make-row();
 }
 
-.product-categoires-inline {
+.product-categories-inline {
   .nav();
-  .nav-pills();
-  .nav-justified();
   .sidebar-nav();
+  .make-row();
   padding-top: 25px;
   padding-bottom: 10px;
   text-transform: uppercase;
+  line-height: 25px;
   > li {
-    display: table-cell;
+    .make-md-column(4);
     padding: 0 10px;
-    // we don't need spacing on first & last items
-    &:first-child {
-      padding-left: 0px;
-    }
-    &:last-child {
-      padding-right: 0px;
-    }
+    text-align: center;
+
     // move the right and left background images in 10px because of padding
     &:before {
       left: 10px;
@@ -470,13 +465,7 @@ main {
     &:after {
       right: 10px;
     }
-    // we don't need the extra padding on first & last
-    &:first-child:before {
-      left: 0px;
-    }
-    &:last-child:after {
-      right: 0px;
-    }
+
   }
   > li > a {
     .border-left-radius(0);
