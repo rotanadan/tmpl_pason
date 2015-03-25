@@ -67,7 +67,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                 </button>
                             </div>
 
-                            <span class="uk-button pull-right visible-xs-inline" data-uk-offcanvas="{target:'#mobilenav'}">
+                            <span class="uk-button pull-right visible-xs-inline-block" data-uk-offcanvas="{target:'#mobilenav'}">
                                 MENU
                             </span>
 
@@ -191,7 +191,13 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
         <!-- This is the off-canvas sidebar -->
         <div id="mobilenav" class="uk-offcanvas">
             <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+                <div class="mobilenavtop">
+                    <a onclick="jQuery.UIkit.offcanvas.offcanvas.hide();" class="mobileclose">CLOSE</a>
+                </div>
                 <jdoc:include type="modules" name="top" style="none" />
+                <div class="mobilesubnav">
+                    <jdoc:include type="modules" name="topright" />
+                </div>
             </div>
         </div>
 

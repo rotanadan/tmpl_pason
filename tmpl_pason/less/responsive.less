@@ -160,7 +160,53 @@
 
 
 // MOBILE NAV STYLING
+.mobilenavtop {
+  background-color: #FFFFFF;
+  text-align: right;
+  .mobileclose {
+    color:#282828;
+    &:before{
+      content: "[";
+      font-size: 18px;
+      padding-right: 2px;
+      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+      color: #000000;
+    }
+    &:after{
+      content: "]";
+      font-size: 18px;
+      padding-left: 2px;
+      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+      color: #000000;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
 .uk-offcanvas-bar{
+  background-color:#404041;
+  ul{
+    margin: 0 -10px 0;
+    li{
+      border-top:solid 1px #282828;
+      background-color: #05dcf6;
+      a{
+        color:#282828;
+      }
+    }
+  }
 
+  .mobilesubnav{
+    ul{
+      li{
+        border-top:solid 1px #FFFFFF;
+        background-color: #282828;
+        a{
+          color:#05dcf6;
+        }
+      }
+    }
+  }
 }
 
