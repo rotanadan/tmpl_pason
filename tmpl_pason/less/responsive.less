@@ -72,6 +72,7 @@
             width: 18%;
             text-align: right;
             display: inline-block;
+            position: relative;
             img {
               vertical-align: middle;
               display: inline-block;
@@ -91,8 +92,8 @@
 
   .blog-featured{
     .item{
-      margin:0 0 20px 0;
       .item-intro-inner{
+        min-height:1px!important;
         p{
           display:none;
           &.readmore{
@@ -111,7 +112,7 @@
 }
 
 //fix bars on heading
-  .blog-featured {
+.home main .blog-featured {
     .page-header {
       h1 {
 
@@ -132,4 +133,34 @@
         }
       }
     }
+
+    //change item breakpoints
+    .item {
+      @media screen and (max-width: @screen-md-max) {
+        margin:0 0 20px 0;
+      }
+      .make-sm-column(12);
+      .make-md-column(12);
+      .make-lg-column(4);
+      .readmore{
+        @media screen and (max-width: @screen-md-max) {
+          position: relative;
+          right: 0;
+          left: 0;
+        }
+      }
+      .item-intro-inner {
+        @media screen and (max-width: @screen-md-max) {
+          min-height: 1px !important;
+        }
+      }
+    }
   }
+
+
+
+// MOBILE NAV STYLING
+.uk-offcanvas-bar{
+
+}
+
