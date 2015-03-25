@@ -67,7 +67,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                 </button>
                             </div>
 
-                            <span class="uk-button pull-right visible-xs" data-uk-offcanvas="{target:'#mobilenav'}">
+                            <span class="uk-button pull-right visible-xs-inline" data-uk-offcanvas="{target:'#mobilenav'}">
                                 MENU
                             </span>
 

@@ -1,5 +1,27 @@
 @media screen and (max-width: @screen-xs-max){
 
+  .navbar-header{
+    display:inline-block;
+  }
+  .uk-button{
+    cursor:pointer;
+    &:before{
+      content: "[";
+      font-size: 18px;
+      padding-right: 2px;
+      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+      color: #000000;
+    }
+    &:after{
+      content: "]";
+      font-size: 18px;
+      padding-left: 2px;
+      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+      color: #000000;
+    }
+  }
+
+
   #mini-nav-section{
     display:none
   }
