@@ -125,7 +125,17 @@ header {
   }
   #home-slides {
     padding-bottom: 20px;
-    min-height: 270px;
+  }
+}
+
+// product page carousel indicators
+#products-main-banner-slides {
+  .carousel-indicators {
+    left: auto;
+    top: 0px;
+    right: 0px;
+    bottom: auto;
+    text-align: right;
   }
 }
 
@@ -163,18 +173,38 @@ header {
       display: block;
     }
   }
-  .carousel-inner {
-    padding-bottom: 20px;
-  }
 }
 
 
 .light-ruler-top {
   .ruler-bg-top();
+
 }
 
 .light-ruler-bottom {
   .ruler-bg-bottom();
+}
+
+#page-headline, #products-main-banner-slides {
+  position: relative;
+  .page-headline-inner {
+    position: relative;
+  }
+  .light-ruler-top {
+    position: absolute;
+    top: 50px;
+    height: 6px;
+    padding-top: 0px;
+  }
+
+  .light-ruler-bottom {
+    position: absolute;
+    bottom: 50px;
+    height: 6px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 .dark-ruler-top {
@@ -227,17 +257,16 @@ header {
   display: table;
 }
 
-
-.page-headline-inner {
-
-  .container {
-    padding-bottom: 20px;
-  }
-}
-
 #customer-support,
 #about-pason {
   padding-top:5px;
+}
+
+// all slides min height
+#home-slides {
+  .item {
+    min-height: 160px;
+  }
 }
 
 /* homepage news and events articles styling */
@@ -260,6 +289,7 @@ header {
         background: @pason-gray;
         z-index: 1;
         .fade-transition(0.5s);
+        min-height: 300px;
         &:before {
           content: "";
           position: absolute;
@@ -275,7 +305,22 @@ header {
           border: 10px solid @pason-cyan;
           background: @pason-cyan;
         }
+
+        .readmore {
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          right: 15px;
+          left: 15px;
+        }
       }
+    }
+  }
+
+  // homepage slides min height
+  #home-slides {
+    .item {
+      min-height: 260px;
     }
   }
 }
@@ -389,6 +434,8 @@ main {
   }
 }
 
+
+
 #content {
   padding-bottom: 30px;
 }
@@ -398,24 +445,19 @@ main {
   .make-row();
 }
 
-.product-categoires-inline {
+.product-categories-inline {
   .nav();
-  .nav-pills();
-  .nav-justified();
   .sidebar-nav();
+  .make-row();
   padding-top: 25px;
   padding-bottom: 10px;
   text-transform: uppercase;
+  line-height: 25px;
   > li {
-    display: table-cell;
+    .make-md-column(4);
     padding: 0 10px;
-    // we don't need spacing on first & last items
-    &:first-child {
-      padding-left: 0px;
-    }
-    &:last-child {
-      padding-right: 0px;
-    }
+    text-align: center;
+
     // move the right and left background images in 10px because of padding
     &:before {
       left: 10px;
@@ -423,13 +465,7 @@ main {
     &:after {
       right: 10px;
     }
-    // we don't need the extra padding on first & last
-    &:first-child:before {
-      left: 0px;
-    }
-    &:last-child:after {
-      right: 0px;
-    }
+
   }
   > li > a {
     .border-left-radius(0);

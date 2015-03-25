@@ -2,12 +2,16 @@ jQuery(document).ready(function($) {
 
     $('.eq-height').each(function(){
         heightCenter($(this));
-    })
+    });
+
+    if ($('#products-main-banner-slides').length) {
+        heightCenter($('#products-main-banner-slides'));
+    }
 
     function heightCenter(container) {
         var outerHeight = container.height();
 
-        var inner = $('div', container).first();
+        var inner = $('.container', container);
 
         var innerHeight = inner.height();
 

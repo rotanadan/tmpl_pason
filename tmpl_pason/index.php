@@ -77,7 +77,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
             </section>
         </header>
         <?php if($this->countModules('main-banner')): ?>
-            <section class="parallax-window img-holder main-banner-slides" style="min-height:545px"
+            <section class="parallax-window img-holder main-banner-slides" style="min-height: <?php echo $this->params->get('image_max_height'); ?>px"
                      data-parallax="scroll"
                      data-image-src="<?php echo JUri::root() . $this->params->get('main_bg_image'); ?>"
                      data-natural-width="<?php echo $this->params->get('image_width'); ?>"
