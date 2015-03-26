@@ -1,10 +1,29 @@
+// MAIN MENU
+@media screen and (max-width: @screen-sm-max) {
+  header #main-nav-section #main-nav{
+    padding-left:0;
+    padding-right:0;
+    li > a {
+      padding: 8px 0;
+      font-size: 12px;
+      &:before,&:after{font-size:14px;padding-left:0;padding-right:0;}
+      &:hover,&:active,&:focus{
+        &:before,&:after{font-size:14px;padding-left:0;padding-right:0;}
+      }
+    }
+  }
+}
+
+
+
 // FIX ARROWS ON MAIN SLIDER
-.main-banner-slides {
+.main-banner-slides #home-slides {
 
   @media screen and (max-width: 1360px) {
     .next-toggle {
       left: auto;
-      right: -20%;
+      width:auto;
+      right: -8%;
     }
 
     .previous-toggle {
@@ -14,7 +33,8 @@
   @media screen and (max-width: 1060px) {
     .next-toggle {
       left: auto;
-      right: -20%;
+      width:auto;
+      right: -4%;
     }
 
     .previous-toggle {
@@ -24,6 +44,14 @@
   @media screen and (max-width: @screen-sm-max) {
     .previous-toggle, .next-toggle {
       display: none;
+    }
+    h1{
+      font-size:54px;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    h1{
+      font-size:40px;
     }
   }
 }
@@ -64,11 +92,49 @@
     display:none;
   }
 
+
+
+  .blog-featured{
+    .item{
+      .item-intro-inner{
+        min-height:1px!important;
+        p{
+          display:none;
+          &.readmore{
+            display:block;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+
+
+// FEATURED BOXES
+@media screen and (max-width: @screen-sm-max) {
+  #featured-solutions {
+    .featured-solution {
+      .featured-solution-inner {
+        .featured-solution-content{
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @screen-xs-max) {
   #featured-solutions {
     margin-top: -64px;
     .featured-solution {
       z-index: 999;
-      margin:0 0 20px 0;
+      margin: 0 0 20px 0;
 
       .featured-solution-inner {
 
@@ -97,7 +163,7 @@
             vertical-align: middle;
 
           }
-          .arrows{
+          .arrows {
             width: 18%;
             text-align: right;
             display: inline-block;
@@ -118,23 +184,6 @@
       }
     }
   }
-
-  .blog-featured{
-    .item{
-      .item-intro-inner{
-        min-height:1px!important;
-        p{
-          display:none;
-          &.readmore{
-            display:block;
-          }
-        }
-      }
-    }
-  }
-
-
-
 }
 
 
