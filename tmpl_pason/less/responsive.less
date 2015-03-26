@@ -133,6 +133,8 @@
     }
   }
 
+
+
 }
 
 
@@ -257,7 +259,7 @@
 // SELECT SUB MENUS
 .above-content-row {
   text-align: center;
-  .moduletable_menu {
+  .moduletable_menu.select_menu {
     &:before{
       content: "";
       background: url(../images/bracket80.png) no-repeat;
@@ -298,6 +300,28 @@
       margin: 0 0 50px 0;
       @media screen and (max-width: 600px) {
         width:280px;
+      }
+    }
+  }
+}
+
+
+///PRODUCTS PAGE
+.products-list{
+  .item{
+    .product-link{
+      img{
+        @media screen and (max-width: @screen-xs-max) {
+          width: 100%;
+        }
+      }
+      h3{
+        @media screen and (max-width: @screen-sm-max) {
+          font-size:18px;
+        }
+        @media screen and (max-width: @screen-xs-max) {
+          font-size:37px;
+        }
       }
     }
   }
