@@ -59,14 +59,14 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                                 <jdoc:include type="modules" name="top" />
                             </nav>
 
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
+<!--                            <div class="navbar-header">-->
+<!--                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">-->
+<!--                                    <span class="sr-only">Toggle navigation</span>-->
+<!--                                    <span class="icon-bar"></span>-->
+<!--                                    <span class="icon-bar"></span>-->
+<!--                                    <span class="icon-bar"></span>-->
+<!--                                </button>-->
+<!--                            </div>-->
 
                             <span class="uk-button pull-right visible-xs-inline-block" data-uk-offcanvas="{target:'#mobilenav'}">
                                 MENU
@@ -212,6 +212,7 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                     jQuery(this).carousel('next');
                 });
             });
+
         </script>
 
     </body>

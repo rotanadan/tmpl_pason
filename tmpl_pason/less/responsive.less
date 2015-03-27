@@ -1,14 +1,27 @@
+//TOP BAR SPACING
+@media screen and (max-width: @screen-xs-max) {
+  header #main-nav-section .navbar {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
 // MAIN MENU
+header #main-nav-section #main-nav li a{
+text-decoration: none;
+}
 @media screen and (max-width: @screen-sm-max) {
-  header #main-nav-section #main-nav{
-    padding-left:0;
-    padding-right:0;
-    li > a {
-      padding: 8px 0;
-      font-size: 12px;
-      &:before,&:after{font-size:14px;padding-left:0;padding-right:0;}
-      &:hover,&:active,&:focus{
+  header #main-nav-section{
+
+      #main-nav{
+      padding-left:0;
+      padding-right:0;
+      li > a {
+        padding: 8px 0;
+        font-size: 12px;
         &:before,&:after{font-size:14px;padding-left:0;padding-right:0;}
+        &:hover,&:active,&:focus{
+          &:before,&:after{font-size:14px;padding-left:0;padding-right:0;}
+        }
       }
     }
   }
@@ -65,16 +78,18 @@
   }
   .uk-button{
     cursor:pointer;
+    margin-top: 6px;
+    font-size:20px;
     &:before{
       content: "[";
-      font-size: 18px;
+      font-size: 26px;
       padding-right: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
     }
     &:after{
       content: "]";
-      font-size: 18px;
+      font-size: 26px;
       padding-left: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
@@ -257,19 +272,24 @@
 .mobilenavtop {
   background-color: #FFFFFF;
   text-align: right;
-  height: 77px;
+  height: 112px;
+  padding-top: 37px;
+  padding-right: 10px;
   .mobileclose {
+    cursor:pointer;
     color:#282828;
+    font-size:20px;
+    text-decoration: none;
     &:before{
       content: "[";
-      font-size: 18px;
+      font-size: 26px;
       padding-right: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
     }
     &:after{
       content: "]";
-      font-size: 18px;
+      font-size: 26px;
       padding-left: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
@@ -287,8 +307,14 @@
       border-top:solid 1px #282828;
       background-color: #05dcf6;
       a{
+        text-decoration: none;
         color:#282828;
       }
+    }
+    ul{
+      width: 100%;
+      background:none;
+      padding: 0;
     }
   }
 
@@ -298,6 +324,7 @@
         border-top:solid 1px #FFFFFF;
         background-color: #282828;
         a{
+          text-decoration: none;
           color:#05dcf6;
         }
       }
@@ -309,7 +336,8 @@
 // SELECT SUB MENUS
 .above-content-row {
   text-align: center;
-  .moduletable_menu.select_menu {
+  .select_menu {
+    width:100%;
     &:before{
       content: "";
       background: url(../images/bracket80.png) no-repeat;
@@ -346,17 +374,43 @@
       color: #FFFFFF;
       border: none;
       font-size:32px;
-      width:560px;
+      width:100%;
       margin: 0 0 50px 0;
-      @media screen and (max-width: 600px) {
-        width:280px;
-      }
     }
   }
 }
 
 
 ///PRODUCTS PAGE
+@media screen and (max-width: @screen-xs-max) {
+  #home-slides {
+    .carousel-titles {
+      ol.indicator-titles {
+        display:inline-block;
+        width: 88%;
+        li {
+          display: block;
+          background:none!important;
+          font-size: 20px;
+          &:before,&:after{
+            font-size: 23px;
+          }
+        }
+      }
+      ol.carousel-indicators{
+        position:static;
+        display:inline-block;
+        width: 9%;
+        margin:0;
+
+        li{
+          margin-top:25px;
+          display: block;
+        }
+      }
+    }
+  }
+}
 .products-list{
   .item{
     .product-link{
@@ -370,10 +424,88 @@
           font-size:18px;
         }
         @media screen and (max-width: @screen-xs-max) {
-          font-size:37px;
+          font-size: 30px;
         }
       }
     }
   }
 }
 
+
+//INDIVIDUAL PRODUCT PAGE
+@media screen and (max-width: @screen-xs-max) {
+
+  .product-header-inner{
+.container{
+  padding-bottom:90px!important;
+}
+  }
+  .product-title-row{
+    &.double{
+      margin-top: -88px;
+    }
+    h1 {
+        font-size: 64px;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  .category-desc {
+    .row {
+      .col-md-3 {
+        padding-bottom: 15px;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+//CLEARFIX LEFT ASIDE ON MOBILE
+@media screen and (max-width: @screen-sm-max) {
+  #left-column{
+    clear:both;
+  }
+}
+
+
+//FOOTER MENU
+@media screen and (max-width: @screen-sm-max) {
+  footer {
+    ul.menu {
+      li {
+        float: left;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//MAKE GRAPH TABLES RESPONSIVE
+@media screen and (max-width: @screen-sm-max) {
+  #qmMiniCharts {
+    .table-responsive;
+  }
+  #qmDetailedQuote {
+    overflow-y:hidden;
+    .table-responsive;
+  }
+}
+  #qmDetailedQuote {
+    font-size: 15px;
+    td,th{
+      padding: 0 2px;
+    }
+  }
+
+// MAKE YOUTUBE VIDEO RESPONSIVE
+//@media screen and (max-width: @screen-sm-max) {
+  .item-page {
+    iframe {
+      width: 100%;
+    }
+  }
+//}

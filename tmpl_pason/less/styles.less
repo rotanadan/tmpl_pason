@@ -358,6 +358,7 @@ header {
       background: url('../images/product-menu-arrow.png') no-repeat  96% center #e7e7e8;
       color: #282828;
       padding: 0px 15px;
+      text-decoration: none;
       &:hover, &:focus, &.active {
         background: url('../images/product-menu-arrow-hover.png') no-repeat  96%  center #282828;
         color: #fff;
@@ -392,16 +393,8 @@ main {
   }
 
   #left-column {
-    .make-lg-column(4);
     .make-md-column(4);
-    .make-sm-column(4);
-    .make-xs-column(4);
-
-    //.make-xs-column-pull(8);
-    //.make-sm-column-pull(8);
     .make-md-column-pull(8);
-    .make-lg-column-pull(8);
-
   }
 
   #right-column {
@@ -414,14 +407,9 @@ main {
   .hasLeft {
     #main-content {
       .make-xs-column(12);
-      .make-sm-column(12);
       .make-md-column(8);
-      .make-lg-column(8);
 
-      //.make-xs-column-push(4);
-      //.make-sm-column-push(4);
       .make-md-column-push(4);
-      .make-lg-column-push(4);
 
     }
   }
@@ -608,6 +596,7 @@ footer {
   }
   a {
     color: #565658;
+    text-decoration: none;
   }
 }
 
