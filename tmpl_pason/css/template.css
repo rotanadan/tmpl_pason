@@ -7865,11 +7865,11 @@ main .hasRight #main-content {
   background: url('../images/product-categories-nav-right.png') no-repeat;
 }
 .product-categories-inline > li.active a {
-  background: #f47f20;
+  background: #05dcf6;
 }
 .product-categories-inline > li.active a:after {
   content: " ";
-  background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat;
+  background: url('../images/product-category-active-arrow.png') no-repeat;
   position: absolute;
   bottom: -6px;
   display: block;
@@ -7893,14 +7893,20 @@ main .hasRight #main-content {
 .product-categories-inline > li.active:focus > a,
 .product-categories-inline > li:hover > a,
 .product-categories-inline > li:focus > a {
-  background: #05dcf6;
+  background: #f47f20;
 }
 .product-categories-inline > li.active:hover > a:after,
 .product-categories-inline > li.active:focus > a:after,
 .product-categories-inline > li:hover > a:after,
 .product-categories-inline > li:focus > a:after {
   content: " ";
-  background: transparent;
+  position: absolute;
+  bottom: -6px;
+  display: block;
+  width: 11px;
+  height: 6px;
+  left: 50%;
+  background: url('../images/main-nav-hover-down-arrow-bg.png') no-repeat;
 }
 .products-list .item {
   padding: 10px;
