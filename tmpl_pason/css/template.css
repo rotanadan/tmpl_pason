@@ -1695,6 +1695,7 @@ header #main-nav-section #main-nav li.active a:after {
 .home #home-slides h1 {
   font-weight: 100;
   font-size: 70px;
+  color: #fff;
 }
 .home main .item-intro-inner {
   color: #fff;
@@ -1706,40 +1707,51 @@ header #main-nav-section #main-nav li.active a:after {
   margin-top: 0px;
   margin-bottom: 40px;
   font-size: 88%;
+  color: #fff;
+}
+.home main .item-intro-inner a {
+  color: #fff;
+  text-decoration: none;
 }
 .home main .item-intro-inner .readmore {
   text-transform: uppercase;
 }
 .home main .item-intro-inner .readmore > a {
-  color: #fff;
-}
-.home main .item-intro-inner .readmore > a .icon-chevron-right {
-  background: url('../images/learn-more-arrow.png');
-  height: 16px;
-  width: 20px;
-  display: block;
-  margin-top: 5px;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
-  margin-right: 7px;
+}
+.home main .item-intro-inner .readmore > a .icon-chevron-right {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  height: 16px;
+  width: 20px;
   float: right !important;
-  margin-top: 0px;
+  background: url('../images/learn-more-arrow.png');
+}
+.home main .item-intro-inner .readmore > a:hover,
+.home main .item-intro-inner .readmore > a:focus {
+  text-decoration: none;
+  padding: 11px 7px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 .home main .item-intro-inner .readmore > a:hover .icon-chevron-right,
 .home main .item-intro-inner .readmore > a:focus .icon-chevron-right {
-  background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 0px;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
-  background: url('../images/learn-more-arrow.png');
   float: right !important;
-  margin-top: 0px;
 }
 .home main .item-intro-inner {
   font-size: 14px;
@@ -1867,12 +1879,12 @@ fieldset[disabled] .learn-more {
   -ms-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
-  margin-right: 7px;
+  margin-right: 0px;
 }
 .learn-more:hover .learn-more-arrow,
 .learn-more:focus .learn-more-arrow {
   background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 0px;
+  margin-right: 7px;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
@@ -1890,11 +1902,18 @@ fieldset[disabled] .learn-more {
   -ms-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
-  margin-right: 7px;
+  margin-right: 0px;
 }
 .make-learn-more-hover {
   background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 0px;
+  margin-right: 7px;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+.ease {
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
@@ -7330,8 +7349,8 @@ header #main-nav-section #main-nav {
 .home main .item .item-intro-inner {
   position: relative;
   padding: 15px 15px 0px 15px;
-  border: 10px solid #c9cacc;
-  background: #c9cacc;
+  border: 10px solid #565658;
+  background: #565658;
   z-index: 1;
   -webkit-transition: 0.5s ease-out;
   -moz-transition: 0.5s ease-out;

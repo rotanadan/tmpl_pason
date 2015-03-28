@@ -500,6 +500,7 @@ header {
     h1 {
       font-weight: 100;
       font-size: 70px;
+      color: #fff;
     }
   }
   main {
@@ -510,23 +511,32 @@ header {
         margin-top: 0px;
         margin-bottom: 40px;
         .small();
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
       }
       .readmore {
         text-transform: uppercase;
+
         > a {
-          color: #fff;
+          .ease();
           .icon-chevron-right {
-           .make-learn-more();
+            .ease();
+            height: 16px;
+            width: 20px;
             .pull-right();
-            margin-top: 0px;
+            background: url('../images/learn-more-arrow.png');
           }
 
           &:hover, &:focus {
+            text-decoration: none;
+            padding: 11px 7px;
+            .ease();
             .icon-chevron-right {
-              .make-learn-more-hover();
-              background: url('../images/learn-more-arrow.png');
+              .ease();
               .pull-right();
-              margin-top: 0px;
             }
           }
         }
@@ -601,6 +611,7 @@ header {
   padding: 10px 0px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+
   .learn-more-arrow {
     .make-learn-more();
   }
@@ -619,17 +630,17 @@ header {
   width: 20px;
   display: block;
   margin-top: 5px;
-  -webkit-transition: all 0.7s ease-out;
-  -moz-transition: all 0.7s ease-out;
-  -ms-transition: all 0.7s ease-out;
-  -o-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
-  margin-right: 7px;
+  .ease();
+  margin-right: 0px;
 }
 
 .make-learn-more-hover {
   background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 0px;
+  margin-right: 7px;
+  .ease();
+}
+
+.ease {
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
