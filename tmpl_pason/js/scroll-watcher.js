@@ -65,7 +65,7 @@ jQuery(document).ready(function($){
         }
 
         // build the position property
-        var position = ruler_x + 'px ' + '0px';
+        var position = ruler_x + 'px ' + ' bottom';
 
         // reset the css
         rule.css('background-position', position );

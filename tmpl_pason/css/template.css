@@ -7137,6 +7137,7 @@ header #mini-nav-section {
 }
 header #mini-nav-section #mini-nav {
   background: #000;
+  line-height: 1.4;
 }
 header #mini-nav-section ul.nav > li {
   float: left;
@@ -7177,6 +7178,7 @@ header #mini-nav-section .dropdown-menu > li > a {
   padding: 5px 57px 5px 8px;
   color: #fff;
   background: url('../images/menu-dropdown-plus-icon.png') no-repeat 93% 50%;
+  line-height: 1.4;
 }
 header #mini-nav-section .dropdown-menu > li > a:hover,
 header #mini-nav-section .dropdown-menu > li > a:focus {
@@ -7212,6 +7214,9 @@ header #main-nav-section .navbar-brand {
 header #main-nav-section #main-nav {
   padding-top: 6px;
   margin-right: -30px;
+}
+.main-banner-slides .light-ruler-top {
+  height: 40px;
 }
 .main-banner-slides .next-toggle,
 .main-banner-slides .previous-toggle {
