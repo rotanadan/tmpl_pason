@@ -1063,7 +1063,7 @@ body {
   font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  color: #333333;
+  color: #282828;
   background-color: #ffffff;
 }
 input,
@@ -1162,7 +1162,7 @@ h6,
   font-family: inherit;
   font-weight: 100;
   line-height: 1.2;
-  color: inherit;
+  color: #282828;
 }
 h1 small,
 h2 small,
@@ -3375,7 +3375,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #686868;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5391,7 +5391,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #282828;
 }
 .alert {
   padding: 15px;
