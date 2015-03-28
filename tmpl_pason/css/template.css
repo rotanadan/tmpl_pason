@@ -7212,16 +7212,16 @@ header #main-nav-section #main-nav {
   display: inline;
 }
 #home-slides .carousel-titles {
-  border-bottom: 1px solid #fff;
   padding-bottom: 4px;
 }
 #home-slides .carousel-titles:after {
-  border-bottom: 1px solid #fff;
   content: " ";
   padding-bottom: 0px;
   width: 100%;
-  height: 8px;
+  height: 5px;
   display: block;
+  border: 1px solid #fff;
+  margin-top: 8px;
 }
 .light-ruler-top {
   background: url('../images/ruler-bg-up-light.png') repeat-x bottom;
