@@ -7506,6 +7506,7 @@ header #main-nav-section #main-nav {
   background: url('../images/product-menu-arrow-hover.png') no-repeat 96% center #282828;
   color: #fff;
 }
+#product-info-links > li.current > a,
 #product-info-links > li.active > a,
 #product-info-links > li.active > a:hover,
 #product-info-links > li.active > a:focus {
@@ -7598,6 +7599,7 @@ header #main-nav-section #main-nav {
   background: url('../images/product-menu-arrow-hover.png') no-repeat 96% center #282828;
   color: #fff;
 }
+.sidebar-nav > li.current > a,
 .sidebar-nav > li.active > a,
 .sidebar-nav > li.active > a:hover,
 .sidebar-nav > li.active > a:focus {
@@ -7875,6 +7877,7 @@ main .hasRight #main-content {
   background: url('../images/product-menu-arrow-hover.png') no-repeat 96% center #282828;
   color: #fff;
 }
+.product-categories-inline > li.current > a,
 .product-categories-inline > li.active > a,
 .product-categories-inline > li.active > a:hover,
 .product-categories-inline > li.active > a:focus {
