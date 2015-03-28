@@ -1830,10 +1830,19 @@ header #main-nav-section #main-nav li.active a:after {
   width: 100%;
   text-transform: uppercase;
   text-align: left;
+  text-decoration: none;
   color: #fff;
   padding: 10px 0px;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 .learn-more:focus,
 .learn-more:active:focus,
@@ -1881,10 +1890,18 @@ fieldset[disabled] .learn-more {
   transition: all 0.7s ease-out;
   margin-right: 0px;
 }
+.learn-more:hover,
+.learn-more:focus {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  padding: 10px;
+}
 .learn-more:hover .learn-more-arrow,
 .learn-more:focus .learn-more-arrow {
   background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 7px;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
@@ -1906,7 +1923,6 @@ fieldset[disabled] .learn-more {
 }
 .make-learn-more-hover {
   background: url('../images/learn-more-arrow-hover.png');
-  margin-right: 7px;
   -webkit-transition: all 0.7s ease-out;
   -moz-transition: all 0.7s ease-out;
   -ms-transition: all 0.7s ease-out;
@@ -1945,6 +1961,23 @@ fieldset[disabled] .learn-more {
   width: 100%;
   height: 5px;
   margin-top: 5px;
+}
+#about-pason h1,
+#customer-support h1,
+#page-headline h1,
+#about-pason h2,
+#customer-support h2,
+#page-headline h2,
+#about-pason h3,
+#customer-support h3,
+#page-headline h3,
+#about-pason h4,
+#customer-support h4,
+#page-headline h4,
+#about-pason h5,
+#customer-support h5,
+#page-headline h5 {
+  color: #fff;
 }
 #product-info-links {
   line-height: 24px;
