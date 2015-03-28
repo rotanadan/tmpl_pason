@@ -150,4 +150,9 @@ if ($view == 'category')
 			</li>
 		<?php endforeach; ?>
 	<?php endif; ?>
+    <li>
+        <a href="<?php echo JRoute::_('index.php?option=com_content&view=categories&layout=tmpl_pason:products&id=21&Itemid=52'); ?>">
+            View All Products
+        </a>
+    </li>
 </ul>
