@@ -1,3 +1,9 @@
+//WRAPPER PADDING
+@media screen and (max-width: @screen-sm-max){
+
+}
+
+
 //TOP BAR SPACING
 @media screen and (max-width: @screen-xs-max) {
   header #main-nav-section .navbar {
@@ -251,16 +257,17 @@ text-decoration: none;
       .make-sm-column(12);
       .make-md-column(12);
       .make-lg-column(4);
-      .readmore{
-        @media screen and (max-width: @screen-md-max) {
-          position: relative;
-          right: 0;
-          left: 0;
-        }
-      }
+
       .item-intro-inner {
         @media screen and (max-width: @screen-md-max) {
           min-height: 1px !important;
+        }
+        .readmore{
+          @media screen and (max-width: @screen-md-max) {
+            position: relative;
+            right: 0;
+            left: 0;
+          }
         }
       }
     }
