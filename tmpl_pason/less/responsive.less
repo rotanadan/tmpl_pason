@@ -188,7 +188,7 @@ text-decoration: none;
           }
           .unbroken-title {
             display: inline-block;
-            font-size: 30px;
+            font-size: 22px;
             width: 80%;
             vertical-align: middle;
 
@@ -215,6 +215,11 @@ text-decoration: none;
     }
   }
 }
+@media screen and (max-width: 500px) {
+  #featured-solutions .featured-solution .featured-solution-inner .featured-solution-title .unbroken-title {
+    font-size: 16px;
+  }
+}
 
 
 //HIDE LEFT COLUMN MENUS ON MOBILE
@@ -239,20 +244,29 @@ text-decoration: none;
 .home main {
     .page-header {
       h1 {
-
+        span {
+          @media screen and (max-width: @screen-sm-max) {
+            padding: 0 10px;
+          }
+        }
         &:before, &:after {
-
+          @media screen and (max-width: @screen-md-max) {
+            width: 35%;
+          }
           @media screen and (max-width: @screen-sm-max) {
             width: 30%;
           }
           @media screen and (max-width: @screen-xs-max) {
-            width: 25%;
+            width: 32%;
           }
           @media screen and (max-width: 500px) {
-            width: 14%;
+            width: 18%;
+          }
+          @media screen and (max-width: 420px) {
+            width: 16%;
           }
           @media screen and (max-width: 400px) {
-            width: 7%;
+            width: 8%;
           }
         }
       }
@@ -264,23 +278,34 @@ text-decoration: none;
         margin:0 0 20px 0;
       }
       .make-sm-column(12);
-      .make-md-column(12);
+      .make-md-column(4);
       .make-lg-column(4);
 
       .item-intro-inner {
         @media screen and (max-width: @screen-md-max) {
           min-height: 1px !important;
         }
+        h2{
+          @media screen and (max-width: @screen-sm-max) {
+            font-size:26px;
+          }
+          @media screen and (max-width: @screen-xs-max) {
+            font-size:20px;
+          }
+        }
         .readmore{
           @media screen and (max-width: @screen-md-max) {
             position: relative;
             right: 0;
             left: 0;
+            border-bottom: 1px solid #FFFFFF;
+            margin: 0 0 35px;
           }
         }
       }
     }
   }
+
 
 
 
@@ -503,6 +528,18 @@ text-decoration: none;
   }
 }
 
+
+//FOOTER COPYRIGHT
+footer{
+  .copyright{
+    @media screen and (max-width: @screen-xs-max){
+      float:left;
+    }
+    float:right;
+  }
+}
+
+
 //MAKE GRAPH TABLES RESPONSIVE
 @media screen and (max-width: @screen-sm-max) {
   #qmMiniCharts {
@@ -528,3 +565,23 @@ text-decoration: none;
     }
   }
 //}
+
+
+
+//FIX MODAL SCROLLING FOR PHONE
+@media screen and (max-width: @screen-xs-max) {
+  .fancybox-overlay-fixed {
+    overflow: scroll!important;
+    .fancybox-inner {
+      height: auto !important;
+      overflow: auto !important;
+      #inline-auto232 > div {
+        height: auto !important;
+        overflow: auto !important;
+      }
+      .btn{
+        font-size: 14px;
+      }
+    }
+  }
+}
