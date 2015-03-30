@@ -569,19 +569,33 @@ footer{
 
 
 //FIX MODAL SCROLLING FOR PHONE
+//@media screen and (max-width: @screen-xs-max) {
+//  .fancybox-overlay-fixed {
+//    overflow: scroll!important;
+//    .fancybox-inner {
+//      height: auto !important;
+//      overflow: auto !important;
+//      #inline-auto232 > div {
+//        height: auto !important;
+//        overflow: auto !important;
+//      }
+//      .btn{
+//        font-size: 14px;
+//      }
+//    }
+//  }
+//}
+
+//CONTACT PAGE
 @media screen and (max-width: @screen-xs-max) {
-  .fancybox-overlay-fixed {
-    overflow: scroll!important;
-    .fancybox-inner {
-      height: auto !important;
-      overflow: auto !important;
-      #inline-auto232 > div {
-        height: auto !important;
-        overflow: auto !important;
-      }
-      .btn{
-        font-size: 14px;
-      }
+  .contact-page {
+    line-height: 1.3;
+    h3 {
+      font-size: 18px;
+    }
+    p, a {
+    padding:4px 0 0 0;
+    font-size: 13px;
     }
   }
 }
