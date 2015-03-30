@@ -17,13 +17,14 @@ defined('_JEXEC') or die;
 //?>
 
 <select onChange="window.location.href=this.value">
+    <option selected disabled><?php echo $module->title; ?></option>
     <?php
     foreach ($list as $i => &$item)
     {
         $selected='';
         if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
         {
-            $selected='selected="selected"';
+//            $selected='selected="selected"';
         }
         echo '<option '.$selected.' value="' . $item->link . '&Itemid='.$item->id.'">';
 
