@@ -1,0 +1,142 @@
+/* Cohesive Custom CSS */
+
+.featured-solution a {
+	color:#333333; 
+	text-decoration: none;
+}
+
+.page-header {
+	border: none;
+}
+
+.page-header h2 {
+	font-weight: 500;
+}
+
+.rnf a {
+	color:#000000; 
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.rnf {
+	color:#05dcf6; 
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.content-links {
+	display: none;
+}
+
+a {
+	color:#333333;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #05dcf6;
+	text-decoration: underline;
+}
+
+.moduletable_menu a, .mini-nav-row a {
+	text-decoration: none;
+}
+
+.col-md-12.bodLeft {
+	padding-left: 0px;
+}
+
+.col-md-12.bodLeft.bodBottom {
+	padding-bottom: 15px;
+}
+
+.bod-list .bod-item:nth-child(2n+1) {
+	clear:both;
+}
+
+.bod-list .bod-item {
+ 	margin-top: 10px;
+ 	margin-bottom: 10px;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
+.col-md-12.caps {
+	margin-bottom: 10px;
+}
+
+#mini-nav {
+    position: relative;
+}
+
+.element-invisible {
+    display: none;
+}
+
+.qmmt_main {
+    width: 100%;
+}
+
+.qmmt_header_text {
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+#qmDetailedQuote .qmmt_main table table tr {
+    border-bottom: 1px solid #282828;
+}
+
+#qmDetailedQuote .qmmt_main table table tr td {
+    padding: 5px 0px;
+}
+.qmmt_header_bar {
+    display: none;
+}
+
+.qmmt_text {
+    padding-right: 5px;
+}
+
+.qmmt_main img[id^="dgraph_"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.qmmt_tab, .qmmt_tabactive {
+    position: relative;
+    margin-top: 5px;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.qmmt_tab:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 2px solid #05dcf6;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    background: #fff;
+}
+
+.qmmt_tabactive:before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 2px solid #05dcf6;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    background: #05dcf6;
+}
+
+#qmFooter {
+    display: none;
+}
