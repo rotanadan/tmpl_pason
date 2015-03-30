@@ -241,18 +241,20 @@ text-decoration: none;
       h1 {
 
         &:before, &:after {
-
+          @media screen and (max-width: @screen-md-max) {
+            width: 35%;
+          }
           @media screen and (max-width: @screen-sm-max) {
             width: 30%;
           }
           @media screen and (max-width: @screen-xs-max) {
-            width: 25%;
+            width: 22%;
           }
           @media screen and (max-width: 500px) {
             width: 14%;
           }
           @media screen and (max-width: 400px) {
-            width: 7%;
+            width: 4%;
           }
         }
       }
@@ -276,6 +278,8 @@ text-decoration: none;
             position: relative;
             right: 0;
             left: 0;
+            border-bottom: 1px solid #FFFFFF;
+            margin: 0 0 35px;
           }
         }
       }
@@ -503,6 +507,18 @@ text-decoration: none;
   }
 }
 
+
+//FOOTER COPYRIGHT
+footer{
+  .copyright{
+    @media screen and (max-width: @screen-xs-max){
+      float:left;
+    }
+    float:right;
+  }
+}
+
+
 //MAKE GRAPH TABLES RESPONSIVE
 @media screen and (max-width: @screen-sm-max) {
   #qmMiniCharts {
@@ -528,3 +544,20 @@ text-decoration: none;
     }
   }
 //}
+
+
+
+//FIX MODAL SCROLLING FOR PHONE
+@media screen and (max-width: @screen-xs-max) {
+  .fancybox-overlay-fixed {
+    overflow: scroll!important;
+    .fancybox-inner {
+      height: auto !important;
+      overflow: auto !important;
+      #inline-auto232 > div {
+        height: auto !important;
+        overflow: auto !important;
+      }
+    }
+  }
+}
