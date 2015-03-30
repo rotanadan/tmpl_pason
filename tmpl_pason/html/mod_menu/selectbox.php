@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
 <?php //foreach ($list as $i => &$item)
-//{var_dump($item);}
+//{var_dump($item->flink);}
 //?>
 
 <select onChange="window.location.href=this.value">
@@ -26,7 +26,8 @@ defined('_JEXEC') or die;
         {
 //            $selected='selected="selected"';
         }
-        echo '<option '.$selected.' value="' . $item->link . '&Itemid='.$item->id.'">';
+        //echo '<option '.$selected.' value="' . $item->link . '&Itemid='.$item->id.'">';
+        echo '<option '.$selected.' value="' . $item->flink .'">';
 
         // Render the menu item.
         echo $item->title;
