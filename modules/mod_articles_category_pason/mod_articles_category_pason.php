@@ -51,8 +51,10 @@ switch ($mode)
 		break;
 }
 
-
-$categoryLink = 'index.php?option=com_content&view=category&id=' . $idbase;
+if (! is_array($idbase))
+{
+    $categoryLink = 'index.php?option=com_content&view=category&id=' . $idbase;
+}
 
 $cacheid = md5(serialize(array ($idbase, $module->module)));
 

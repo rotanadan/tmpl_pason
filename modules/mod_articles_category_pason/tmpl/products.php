@@ -92,10 +92,12 @@ if ($view == 'category')
 		</li>
 		<?php endforeach; ?>
 	<?php else : ?>
+        <?php if (isset($categoryLink)): ?>
         <li><a href="<?php echo JRoute::_($categoryLink); ?>" <?php if ($isCategoryView): ?> class="active" <?php endif; ?>>
                 About
             </a>
         </li>
+        <?php endif; ?>
 		<?php foreach ($list as $item) : ?>
 			<li>
 				<?php if ($params->get('link_titles') == 1) : ?>
