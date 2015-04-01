@@ -32,7 +32,7 @@ if ($view == 'category')
 
     <?php foreach ($list as $item) : ?>
         <option <?php if($item->active){echo "selected='selected'";} ?> value="<?php echo $item->link; ?>">
-                    <?php echo $item->title; ?>
+            <?php echo $item->title; ?>
         </option>
     <?php endforeach; ?>
 
