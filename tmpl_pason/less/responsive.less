@@ -16,10 +16,46 @@
 //TOP BAR SPACING
 @media screen and (max-width: @screen-xs-max) {
   header #main-nav-section .navbar {
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 8px;
+    margin-top: 16px;
   }
 }
+
+
+//LOGO SIZING
+@media screen and (max-width: @screen-xs-max) {
+  #logo{
+    img{
+      width:124px;
+    }
+  }
+}
+
+//MENU BUTTON
+@media screen and (max-width: @screen-xs-max) {
+  .uk-button {
+    cursor: pointer;
+    margin-top: 7px;
+    font-size: 12px;
+    &:before {
+      content: "[";
+      font-size: 17px;
+      padding-right: 2px;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      color: #000000;
+    }
+    &:after {
+      content: "]";
+      font-size: 17px;
+      padding-left: 2px;
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      color: #000000;
+    }
+  }
+}
+
+
+
 // MAIN MENU
 header #main-nav-section #main-nav li a{
 text-decoration: none;
@@ -79,7 +115,7 @@ text-decoration: none;
   }
   @media screen and (max-width: 440px) {
     h1{
-      font-size:40px;
+      font-size:37px;
     }
   }
 }
@@ -91,25 +127,7 @@ text-decoration: none;
   .navbar-header{
     display:inline-block;
   }
-  .uk-button{
-    cursor:pointer;
-    margin-top: 6px;
-    font-size:20px;
-    &:before{
-      content: "[";
-      font-size: 26px;
-      padding-right: 2px;
-      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-      color: #000000;
-    }
-    &:after{
-      content: "]";
-      font-size: 26px;
-      padding-left: 2px;
-      font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
-      color: #000000;
-    }
-  }
+
 
 
   #mini-nav-section{
@@ -138,8 +156,13 @@ text-decoration: none;
     }
   }
 
-
-
+.customer-support-inner,.about-pason-inner{
+  padding:15px 0 20px;
+}
+.parallax-window{
+  min-height: 0!important;
+  padding-bottom: 30px;
+}
 }
 
 
@@ -161,7 +184,7 @@ text-decoration: none;
 
 @media screen and (max-width: @screen-xs-max) {
   #featured-solutions {
-    margin-top: -64px;
+    margin-top: -30px;
     .featured-solution {
       z-index: 999;
       margin: 0 0 20px 0;
@@ -217,14 +240,17 @@ text-decoration: none;
   }
 }
 @media screen and (max-width: 500px) {
-  #featured-solutions .featured-solution .featured-solution-inner .featured-solution-title{
-    height: 60px;
-    .unbroken-title {
-      font-size: 16px;
-    }
-    .arrows {
-      img {
-       height: 20px;
+  #featured-solutions .featured-solution{
+    margin: 0 0 8px 0;
+      .featured-solution-inner .featured-solution-title{
+      height: 60px;
+      .unbroken-title {
+        font-size: 16px;
+      }
+      .arrows {
+        img {
+         height: 20px;
+        }
       }
     }
   }
@@ -322,24 +348,24 @@ text-decoration: none;
 .mobilenavtop {
   background-color: #FFFFFF;
   text-align: right;
-  height: 112px;
-  padding-top: 37px;
+  height: 76px;
+  padding-top: 23px;
   padding-right: 10px;
   .mobileclose {
     cursor:pointer;
     color:#282828;
-    font-size:20px;
+    font-size:12px;
     text-decoration: none;
     &:before{
       content: "[";
-      font-size: 26px;
+      font-size: 17px;
       padding-right: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
     }
     &:after{
       content: "]";
-      font-size: 26px;
+      font-size: 17px;
       padding-left: 2px;
       font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
       color: #000000;
@@ -397,7 +423,7 @@ text-decoration: none;
       left: 0;
       top: 0;
       width: 4px;
-      height: 80px;
+      height: 40px;
       z-index: 999;
     }
     &:after{
@@ -408,7 +434,7 @@ text-decoration: none;
       right: 0;
       top: 0;
       width: 4px;
-      height: 80px;
+      height: 40px;
       z-index: 999;
       -moz-transform: scaleX(-1);
       -o-transform: scaleX(-1);
@@ -421,14 +447,15 @@ text-decoration: none;
     position: relative;
     select {
       -webkit-appearance: none;
-      height: 80px;
-      text-indent: 10px;
+      height: 40px;
+      text-indent: 18px;
       background-color: #000000;
       color: #FFFFFF;
       border: none;
-      font-size:32px;
+      font-size:.875em;
       width:100%;
-      margin: 0 0 50px 0;
+      margin: 0 0 38px 0;
+      text-transform: uppercase;
     }
   }
 }
@@ -541,7 +568,7 @@ text-decoration: none;
 //FOOTER COPYRIGHT
 footer{
   .copyright{
-    @media screen and (max-width: @screen-xs-max){
+    @media screen and (max-width: 1200px){
       float:left;
     }
     float:right;
