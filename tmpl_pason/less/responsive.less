@@ -198,6 +198,7 @@ text-decoration: none;
             text-align: right;
             display: inline-block;
             position: relative;
+            bottom:0;
             img {
               vertical-align: middle;
               display: inline-block;
@@ -216,8 +217,16 @@ text-decoration: none;
   }
 }
 @media screen and (max-width: 500px) {
-  #featured-solutions .featured-solution .featured-solution-inner .featured-solution-title .unbroken-title {
-    font-size: 16px;
+  #featured-solutions .featured-solution .featured-solution-inner .featured-solution-title{
+    height: 60px;
+    .unbroken-title {
+      font-size: 16px;
+    }
+    .arrows {
+      img {
+       height: 20px;
+      }
+    }
   }
 }
 
