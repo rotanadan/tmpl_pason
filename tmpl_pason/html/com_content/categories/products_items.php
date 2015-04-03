@@ -30,7 +30,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
             <div class="item product-item span4" id="category-<?php echo $item->id;?>">
 
                 <?php if ($this->params->get('show_description_image') && $item->getParams()->get('image')) : ?>
-                    <a class="product-link" href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id));?>">
+                    <a class="product-link" href="<?php echo JRoute::_('index.php?option=com_content&view=category&layout=blog&id=' . $item->id);?>">
                         <h3 class="page-header item-title">
 
                             <?php echo $this->escape($item->title); ?>
