@@ -195,6 +195,11 @@ $templateHelper->registerDelayedScript(Juri::root() . '/templates/' . $this->tem
                 <div class="mobilenavtop">
                     <a onclick="jQuery.UIkit.offcanvas.offcanvas.hide();" class="mobileclose">CLOSE</a>
                 </div>
+                <ul class="nav menu nav navbar-nav">
+                    <li>
+                        <a href="<?php echo JURI::base(); ?>">HOME</a>
+                    </li>
+                </ul>
                 <jdoc:include type="modules" name="top" style="none" />
                 <div class="mobilesubnav">
                     <jdoc:include type="modules" name="topright" />
