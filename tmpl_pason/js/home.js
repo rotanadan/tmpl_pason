@@ -3,7 +3,6 @@
  */
 
 jQuery(document).ready(function($){
-
     /*
     // execute the parallax effect
     $('.img-holder').each(function() {

@@ -4,27 +4,27 @@ jQuery(document).ready(function($){
     $(window).scroll(function() {
 
         if ($('.orange-ruler-bottom').length) {
-            makeScroll($('.orange-ruler-bottom'), 'right');
+            makeScroll($('.orange-ruler-bottom'), 'right', 'bottom');
         }
 
         if ($('.light-ruler-top').length) {
-            makeScroll($('.light-ruler-top'), 'right');
+            makeScroll($('.light-ruler-top'), 'right', 'bottom');
         }
 
         if ($('.light-ruler-bottom').length) {
-            makeScroll($('.light-ruler-bottom'), 'left');
+            makeScroll($('.light-ruler-bottom'), 'left', 'bottom');
         }
 
         if ($('.dark-ruler-top').length) {
-            makeScroll($('.dark-ruler-top'), 'left');
+            makeScroll($('.dark-ruler-top'), 'left', '0px');
         }
 
         if ($('.dark-ruler-bottom').length) {
-            makeScroll($('.dark-ruler-bottom'), 'right');
+            makeScroll($('.dark-ruler-bottom'), 'right', 'bottom');
         }
 
         if ($('.gray-ruler-top').length) {
-            makeScroll($('.gray-ruler-top'), 'left');
+            makeScroll($('.gray-ruler-top'), 'left', '0px');
         }
 
 
@@ -33,7 +33,7 @@ jQuery(document).ready(function($){
     /*
      * takes an input element and a direction (left|right) and scrolls the background property in px
      */
-    function makeScroll(element, direction)
+    function makeScroll(element, direction, bottomPosition)
     {
         // our ruler is our element
         var rule = element;
@@ -65,7 +65,7 @@ jQuery(document).ready(function($){
         }
 
         // build the position property
-        var position = ruler_x + 'px ' + ' bottom';
+        var position = ruler_x + 'px ' + bottomPosition;
 
         // reset the css
         rule.css('background-position', position );

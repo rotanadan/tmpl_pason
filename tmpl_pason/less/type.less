@@ -616,14 +616,20 @@ header {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   .ease();
+  position: relative;
   .learn-more-arrow {
     .make-learn-more();
+    margin-top: 0px;
+    position: absolute;
+    right: 0px;
+    top: 15px;
   }
   &:hover, &:focus {
     .ease();
     padding: 10px;
     .learn-more-arrow {
       .make-learn-more-hover();
+      right: 5px;
     }
   }
 }
@@ -674,6 +680,10 @@ header {
     .double-line()
   }
   h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+  a {
+    text-decoration: underline;
     color: #fff;
   }
 }
