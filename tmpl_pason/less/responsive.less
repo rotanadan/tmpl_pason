@@ -171,7 +171,11 @@ text-decoration: none;
 @media screen and (max-width: @screen-sm-max) {
   #featured-solutions {
     .featured-solution {
+      margin: 0 0 20px 0;
       .featured-solution-inner {
+        .featured-solution-title {
+          background-color: #f2f2f2;
+        }
         .featured-solution-content{
           img{
             width:100%;
@@ -570,6 +574,11 @@ footer{
   .copyright{
     @media screen and (max-width: 1200px){
       float:left;
+      padding: 0 0 0 15px;
+    }
+    @media screen and (max-width: @screen-xs-max){
+      float:left;
+      padding: 0 0 0 2px;
     }
     float:right;
   }
